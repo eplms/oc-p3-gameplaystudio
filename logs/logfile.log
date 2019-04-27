@@ -1,0 +1,5 @@
+INFO  | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:12) - This Will Be Printed On Info
+WARN  | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:13) - This Will Be Printed On Warn
+ERROR | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:14) - This Will Be Printed On Error
+FATAL | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:15) - This Will Be Printed On Fatal
+INFO  | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:17) - Appending string: Hello, World.
