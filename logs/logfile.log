@@ -3,3 +3,8 @@ WARN  | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:13) - This Will Be Pr
 ERROR | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:14) - This Will Be Printed On Error
 FATAL | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:15) - This Will Be Printed On Fatal
 INFO  | 2019-05-02 18:39:18 | [main] mainlog (mainlog.java:17) - Appending string: Hello, World.
+INFO  | 2019-05-03 14:09:15 | [main] mainLog (mainLog.java:12) - This Will Be Printed On Info
+WARN  | 2019-05-03 14:09:15 | [main] mainLog (mainLog.java:13) - This Will Be Printed On Warn
+ERROR | 2019-05-03 14:09:15 | [main] mainLog (mainLog.java:14) - This Will Be Printed On Error
+FATAL | 2019-05-03 14:09:15 | [main] mainLog (mainLog.java:15) - This Will Be Printed On Fatal
+INFO  | 2019-05-03 14:09:15 | [main] mainLog (mainLog.java:16) - Appending string: Hello, World.

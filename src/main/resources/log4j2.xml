@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
     <Properties>
+    	<!-- Dossier de destination du fichier de log -->
         <Property name="basePath">../oc-p3-gameplaystudio/logs</Property>
     </Properties>
+    
+    <!-- Definition des layout pour chaque appender -->
     <Appenders>
         <!-- File Appender -->
         <File name="FILE" fileName="${basePath}/logfile.log" append="true">
@@ -15,6 +18,7 @@
     </Appenders>
     <Loggers>
         <Logger name="com.jcg" level="debug" />
+        <!-- définition du niveau de priorité le plus bas pris en compte -->
         <Root level="info">
             <AppenderRef ref="STDOUT" />
             <AppenderRef ref="FILE" />
