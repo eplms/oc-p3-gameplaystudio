@@ -4,10 +4,11 @@ import org.apache.logging.log4j.Logger;
 
 public class mainLog {
 
+	// instance de classe avec la méthode getLogger
 	private static final Logger LOG = LogManager.getLogger(mainLog.class);
 
 	public static void main(String[] args) {
-	     
+	    // message de log sur le format log.niveau("message")
 	    LOG.debug("This Will Be Printed On Debug");
 	    LOG.info("This Will Be Printed On Info");
 	    LOG.warn("This Will Be Printed On Warn");
