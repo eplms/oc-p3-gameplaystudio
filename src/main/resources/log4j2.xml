@@ -19,9 +19,9 @@
     <Loggers>
         <Logger name="com.jcg" level="debug" />
         <!-- définition du niveau de priorité le plus bas pris en compte -->
-        <Root level="info">
+        <Root level="warn">
             <AppenderRef ref="STDOUT" />
             <AppenderRef ref="FILE" />
         </Root>
-    </Loggers>
+    </Loggers>	
 </Configuration>
