@@ -18,7 +18,17 @@ public class Main {
 		
 		int nbDigit = GestionConfiguration.lireTailleCombinaison();
 		System.out.println("La combinaison à trouver comporte " + nbDigit + " chiffres");
-
+		
+		/**
+		 * Lecture de l'activation du mode développeur
+		 */
+		
+		boolean modeDev=GestionConfiguration.lireModeDeveloppeur();
+		if(modeDev) {
+			System.out.println("Le mode développeur est activé");
+		} else 
+			System.out.println("Le mode développeur est désactivé");
+		}
+		
 	}
 
-}

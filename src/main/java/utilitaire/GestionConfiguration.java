@@ -27,4 +27,18 @@ public class GestionConfiguration {
 		return tailleCombinaison;
 	}
     
+	/**
+	 * Fonction de lecture du mode développeur
+	 * @return modeDeveloppeur en boolean
+	 */
+	public static boolean lireModeDeveloppeur() {
+		boolean modeDeveloppeur=false;
+		String modeDev= configuration.getString("modeDeveloppeur");
+		if (modeDev.equals("oui")) {
+			modeDeveloppeur = true;
+		}else if (modeDev.contentEquals("non")) {
+			modeDeveloppeur = false;
+		}
+		return modeDeveloppeur;
+	}
 }
