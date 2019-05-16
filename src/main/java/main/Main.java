@@ -1,4 +1,5 @@
 package main;
+import utilitaire.GestConfig;
 import utilitaire.GestionConfig;
 
 public class Main {
@@ -8,8 +9,9 @@ public class Main {
 		
 		/*
 		GestionConfig.ecrireConfiguration();
-		*/
 		GestionConfig.lireConfiguration();
+		*/
+		GestConfig.lireConfig();
 		
 		
 	}
