@@ -7,7 +7,8 @@ import java.io.OutputStream;
 import java.util.Properties;
 
 public class GestionConfig {
-
+	
+	
 	public static void ecrireConfiguration ()throws Exception{
 		
 		/* création objet properties qui contient les données de configuration */
@@ -24,7 +25,10 @@ public class GestionConfig {
 		System.out.println(prop);
 	}
 	public static void lireConfiguration ()throws Exception{
-		
+		String nbTry;
+		String nbDigit;
+		int essaiMax=0;
+		int taille=0;
 		/* création objet properties qui contient les données de configuration */
 		Properties prop = new Properties();
 
@@ -33,9 +37,15 @@ public class GestionConfig {
 		InputStream fichier = new FileInputStream("src/main/resources/config.properties");
 		/* chargement du fichier de configuration*/
 		prop.load(fichier);
-		/* mise à jour des valeurs de configuration avec la méthode setProperty*/
-		System.out.println(prop.getProperty("nombreTry"));
-		System.out.println(prop.getProperty("nombreDigit"));
+		/* récupération des valeurs de configuration avec la méthode getProperty*/
+		nbTry= prop.getProperty("nombreTry");
+		nbDigit= prop.getProperty("nombreDigit");
+		
+		/*Transformation des String du fichier de configuration en int */
+		essaiMax= Integer.parseInt(nbTry);
+		taille=Integer.parseInt(nbDigit);
+		System.out.println(essaiMax);
+		System.out.println(taille);
 	}
 	
 }
