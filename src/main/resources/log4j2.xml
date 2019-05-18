@@ -19,7 +19,7 @@
     <Loggers>
         <Logger name="com.jcg" level="debug" />
         <!-- définition du niveau de priorité le plus bas pris en compte -->
-        <Root level="warn">
+        <Root level="debug">
             <AppenderRef ref="STDOUT" />
             <AppenderRef ref="FILE" />
         </Root>

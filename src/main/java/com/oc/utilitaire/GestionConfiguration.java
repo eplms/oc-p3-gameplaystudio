@@ -1,4 +1,4 @@
-package utilitaire;
+package com.oc.utilitaire;
 
 import java.util.ResourceBundle;
 

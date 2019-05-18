@@ -1,3 +1,6 @@
 WARN  | 2019-05-03 20:05:50 | [main] mainLog (mainLog.java:15) - This Will Be Printed On Warn
 ERROR | 2019-05-03 20:05:50 | [main] mainLog (mainLog.java:16) - This Will Be Printed On Error
 FATAL | 2019-05-03 20:05:50 | [main] mainLog (mainLog.java:17) - This Will Be Printed On Fatal
+DEBUG | 2019-05-17 20:28:12 | [main] main.Main (Main.java:17) - Le nombre max d'essais est de 10 essais
+DEBUG | 2019-05-17 20:28:12 | [main] main.Main (Main.java:24) - La combinaison à trouver comporte 4 chiffres
+DEBUG | 2019-05-17 20:28:12 | [main] main.Main (Main.java:32) - Le mode développeur est activé
