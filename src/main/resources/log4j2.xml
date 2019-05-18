@@ -17,8 +17,9 @@
         </Console>
     </Appenders>
     <Loggers>
-        <Logger name="com.jcg" level="debug" />
         <!-- définition du niveau de priorité le plus bas pris en compte -->
+        <Logger name="com.jcg" level="debug" />
+       <!-- définition des appenders : ici console et ecriture dans le fichier -->
         <Root level="debug">
             <AppenderRef ref="STDOUT" />
             <AppenderRef ref="FILE" />
