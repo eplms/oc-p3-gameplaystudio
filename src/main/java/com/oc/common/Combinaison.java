@@ -28,4 +28,22 @@ public abstract class Combinaison implements ICombinaison{
 		}
 	}
 	
+	public static int[] lireCombinaison (int taille){
+		int i=0;
+		int t[] = new int[taille];
+		System.out.print("Proposition : ");
+		
+		Scanner sc = new Scanner (System.in);
+		String proposition=sc.nextLine();
+		
+		if (proposition.length()!=taille) {
+			System.out.println("vous devez entrer une combinaison de "+taille+" chiffres");
+		} else {
+			for (i=0; i<=proposition.length()-1;i++) {
+				t[i]=proposition.charAt(i)-48;
+			}
+		}
+		return t;
+	}
+	
 }
