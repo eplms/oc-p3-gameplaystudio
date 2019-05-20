@@ -18,15 +18,21 @@ public abstract class Combinaison implements ICombinaison{
 		return t;
 	}
 	
-/** Méthode permettant d'afficher la combinaison
- * 	
- */
+	/** Méthode permettant d'afficher la combinaison
+	 * 	
+	 */
 	public void afficherCombinaison(int tab[], int taille) {
 		int i=0;
 		for (i=0; i<=(taille-1); i++) {
 			System.out.print(tab[i]);
 		}
 	}
+	
+	/**
+	 * Méthode permettant la lecture suite de nombres saisis au clavier
+	 * @param taille
+	 * @return tableau d'entier où chaque case est un entier de un chiffre
+	 */
 	
 	public static int[] lireCombinaison (int taille){
 		int i=0;
