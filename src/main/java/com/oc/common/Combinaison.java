@@ -34,7 +34,7 @@ public abstract class Combinaison implements ICombinaison{
 	 * @return tableau d'entier où chaque case est un entier de un chiffre
 	 */
 	
-	public static int[] lireCombinaison (int taille){
+	public int[] lireCombinaison (int taille){
 		int i=0;
 		int t[] = new int[taille];
 		System.out.print("Proposition : ");
