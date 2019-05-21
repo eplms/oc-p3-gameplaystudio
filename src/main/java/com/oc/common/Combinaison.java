@@ -39,8 +39,8 @@ public abstract class Combinaison implements ICombinaison{
 		int t[] = new int[taille];
 		System.out.print("Proposition : ");
 		
-		Scanner sc = new Scanner (System.in);
-		String proposition=sc.nextLine();
+		Scanner saisie = new Scanner (System.in);
+		String proposition = saisie.nextLine();
 		
 		if (proposition.length()!=taille) {
 			System.out.println("vous devez entrer une combinaison de "+taille+" chiffres");
