@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public abstract class Combinaison implements ICombinaison{
 	
-/** Méthode de génération aléatoire de combinaison
- * @return tableau d'entier constituant la combinaison	
- */
+	/** Méthode de génération aléatoire de combinaison
+	 * @return tableau d'entier constituant la combinaison	
+	 */
 	public int[] genererCombinaisonAleatoire(int taille) {
 		int i;
 		int t[] = new int[taille];
@@ -17,21 +17,24 @@ public abstract class Combinaison implements ICombinaison{
 		}
 		return t;
 	}
+	 
 	
-	/** Méthode permettant d'afficher la combinaison
-	 * 	
+	/**
+	 * Méthode permettant d'afficher une combinaison
+	 * @param taille de la combinaison
+	 * @param combinaison tableau contenant la combinaison à afficher
 	 */
-	public void afficherCombinaison(int tab[], int taille) {
+	public void afficherCombinaison(int taille, int combinaison[]) {
 		int i=0;
 		for (i=0; i<=(taille-1); i++) {
-			System.out.print(tab[i]);
+			System.out.print(combinaison[i]);
 		}
 	}
 	
 	/**
 	 * Méthode permettant la lecture suite de nombres saisis au clavier
 	 * @param taille
-	 * @return tableau d'entier où chaque case est un entier de un chiffre
+	 * @return tableau d'entier contenant la combinaison à afficher
 	 */
 	
 	public int[] lireCombinaison (int taille){
