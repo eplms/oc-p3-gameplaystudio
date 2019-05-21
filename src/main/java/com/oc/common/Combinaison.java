@@ -4,21 +4,24 @@ import java.util.Random;
 import java.util.Scanner;
 
 public abstract class Combinaison implements ICombinaison{
+	int taille;
 	
 	/** Méthode de génération aléatoire de combinaison
 	 * @return tableau d'entier constituant la combinaison	
 	 */
 	public int[] genererCombinaisonAleatoire(int taille) {
 		int i;
+		double n;
 		int t[] = new int[taille];
-		Random rand= new Random();
 		for ( i =0;i<=taille-1; i++) {
-			t[i]=rand.nextInt();
+			// génération aléatoire d'un nombre entre 0 et 1)
+			n=Math.random();
+			//transformation de ce nombre en entier compris entre 0 et 9
+			t[i]=(int)(n*(9-0)+1);
 		}
 		return t;
 	}
 	 
-	
 	/**
 	 * Méthode permettant d'afficher une combinaison
 	 * @param taille de la combinaison
@@ -32,7 +35,7 @@ public abstract class Combinaison implements ICombinaison{
 	}
 	
 	/**
-	 * Méthode permettant la lecture suite de nombres saisis au clavier
+	 * Méthode permettant la lecture d'une suite de nombres saisis au clavier
 	 * @param taille
 	 * @return tableau d'entier contenant la combinaison à afficher
 	 */
