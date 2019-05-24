@@ -5,22 +5,22 @@ import com.oc.common.Combinaison;
 public class CombinaisonRecherche extends Combinaison{
 	
 	/**
-	 * méthode de comparaison de deux combinaison
+	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison digit par digit
 	 */
 	public String[] comparerCombinaison (int taille, int combinaison1[], int combinaison2[]) {
 		int i=0;
-        String tab3[]= new String [taille];
+        String resultatComparaison[]= new String [taille];
         for( i =0; i<=(taille-1);i++) {
         	if(combinaison1[i]==combinaison2[i]) {
-        		tab3[i]="=";
+        		resultatComparaison[i]="=";
         	}else if (combinaison1[i]>combinaison2[i]) {
-        		tab3[i]="+";
+        		resultatComparaison[i]="+";
         	}else {
-        		tab3[i]="-";
+        		resultatComparaison[i]="-";
         	}
         }
-        return tab3;
+        return resultatComparaison;
 	}
 	
 	/**
@@ -33,28 +33,24 @@ public class CombinaisonRecherche extends Combinaison{
 	 */
 	public int[] genererProchaineCombinaison(int taille,int nbTentative, int combinaison1[], String resultatComparaison[]) {
     	int i=0;
-		int tab3[]= new int[taille];
+		int prochaineCombinaison[]= new int[taille];
 		CombinaisonRecherche nouvelle= new CombinaisonRecherche();
 	    if (nbTentative == 0) { 
-	    		tab3= nouvelle.genererCombinaisonAleatoire(taille);
+	    		prochaineCombinaison= nouvelle.genererCombinaisonAleatoire(taille);
 	    	}else {
 	    	for (i=0;i<=(taille-1);i++) {
 	    		if(resultatComparaison[i].equals("=")) {
-	    			tab3[i]=combinaison1[i];
+	    			prochaineCombinaison[i]=combinaison1[i];
 	    		} else if (resultatComparaison[i].equals("+")) {
-	    			tab3[i]=combinaison1[i]+1;
+	    			prochaineCombinaison[i]=combinaison1[i]+1;
 	    		} else {
-	    			tab3[i]=combinaison1[i]-1;
+	    			prochaineCombinaison[i]=combinaison1[i]-1;
 	    		}
 	    	}
 	    }
-	    return tab3;
+	    return prochaineCombinaison;
 	}
-
-
-
-
-
+	
 }
 
 
