@@ -50,8 +50,24 @@ public class CombinaisonRecherche extends Combinaison{
 	    }
 	    return prochaineCombinaison;
 	}
+	public boolean estJuste (int taille, String resultatComparaison[]) {
+		boolean resultat;
+		int i=0;
+		int digit=0;
+		for (i=0;i<=taille-1;i++) {
+			if(resultatComparaison[i].equals("=")){
+				digit=digit+1;
+			}
+		}
+		if( digit==taille) {
+			resultat=true;
+		}else {
+			resultat=false;
+		}
+		return resultat;
+	}
 	
 }
-
+	
 
 
