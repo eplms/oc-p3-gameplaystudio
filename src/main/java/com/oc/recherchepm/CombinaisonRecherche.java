@@ -75,6 +75,11 @@ public class CombinaisonRecherche extends Combinaison{
 		}
 		return resultat;
 	}
+	/**
+	 * Méthode permettant à l'utilisateur de saisir le resultat de la comparaison entre la
+	 * propo de l'IA et sa combinaison scrète
+	 * @return resultat de la comparaison saisie
+	 */
 	public String[] lireResultatComparaison() {
 		System.out.println("-> réponse : ");
 		Scanner saisie = new Scanner (System.in);
@@ -84,7 +89,19 @@ public class CombinaisonRecherche extends Combinaison{
 		saisie.close();
 		return resultatComparaison;
 	}
-	
+
+	/**
+	 *Méthode affichant le résultat de la comparaison entre la proposition du joueur et la combinaison secrete
+	 * @taille : taille de la combinaison
+	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
+	 */
+	public void afficherResultatComparaison(int taille, String resultatComparaison[]) {
+		int i=0;
+		for (i=0;i<=taille-1;i++) {
+			System.out.print(resultatComparaison[i]);
+			System.out.println("");
+		}
+	}
 }
 	
 
