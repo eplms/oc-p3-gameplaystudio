@@ -8,4 +8,5 @@ public interface ICombinaison {
 	public String[] comparerCombinaison (int taille, int combinaison1[], int combinaison2[]);
 	public int[] genererProchaineCombinaison(int taille,int nbTentative, int combinaison1[], String resultatComparaison[]);
 	public boolean estJuste(int taille, String resultatComparaison[]);
+	public String[] lireResultatComparaison();
 }

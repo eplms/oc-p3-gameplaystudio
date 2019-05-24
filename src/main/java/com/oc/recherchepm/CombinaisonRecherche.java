@@ -1,5 +1,7 @@
 package com.oc.recherchepm;
 
+import java.util.Scanner;
+
 import com.oc.common.Combinaison;
 
 public class CombinaisonRecherche extends Combinaison{
@@ -29,7 +31,7 @@ public class CombinaisonRecherche extends Combinaison{
 	 * @param nbTentative nombre de combinaisons tentée avant celle-ci
 	 * @param combinaison1 combinaison  précédente
 	 * @param resultatComparaison tableau de résultat de la comparaison précédente avec la solution
-	 * @return
+	 * @return nouvelle combinaison à partir du résultat
 	 */
 	public int[] genererProchaineCombinaison(int taille,int nbTentative, int combinaison1[], String resultatComparaison[]) {
     	int i=0;
@@ -50,6 +52,13 @@ public class CombinaisonRecherche extends Combinaison{
 	    }
 	    return prochaineCombinaison;
 	}
+	
+	/**
+	 * Méthode vérifiant sur la combinaison estJuste à partir du résultat de la comparaison
+	 * @taille : taille de la combinaison
+	 * @resultatComparaison : tableau dans lequel est stocké le résultat de la comparaison
+	 * @return : 
+	 */
 	public boolean estJuste (int taille, String resultatComparaison[]) {
 		boolean resultat;
 		int i=0;
@@ -65,6 +74,15 @@ public class CombinaisonRecherche extends Combinaison{
 			resultat=false;
 		}
 		return resultat;
+	}
+	public String[] lireResultatComparaison() {
+		System.out.println("-> réponse : ");
+		Scanner saisie = new Scanner (System.in);
+		String saisieComparaison = saisie.nextLine();
+		/* découpage de la chaine en caractère et mise dans un tableau */
+		String resultatComparaison[]=saisieComparaison.split("");
+		saisie.close();
+		return resultatComparaison;
 	}
 	
 }
