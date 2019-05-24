@@ -1,6 +1,5 @@
 package com.oc.common;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public abstract class Combinaison implements ICombinaison{
