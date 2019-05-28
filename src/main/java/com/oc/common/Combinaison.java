@@ -3,14 +3,14 @@ package com.oc.common;
 import java.util.Scanner;
 
 public abstract class Combinaison implements ICombinaison{
-	int taille;
-	int combinaison[];
-	int historique;
+	protected int taille;
+	protected int combinaison[];
+	protected int historique;
 	
 	/** Méthode de génération aléatoire de combinaison
 	 * @return tableau d'entier constituant la combinaison	
 	 */
-	public int[] genererCombinaisonAleatoire(int taille) {
+	public int[] genererCombinaisonAleatoire() {
 		int i;
 		double digit;
 		int combinaisonAleatoire[] = new int[taille];
@@ -25,35 +25,43 @@ public abstract class Combinaison implements ICombinaison{
 	 
 	/**
 	 * Méthode permettant d'afficher une combinaison
-	 * @param taille de la combinaison
 	 * @param combinaison tableau contenant la combinaison à afficher
 	 */
-	public void afficherCombinaison(int taille, int combinaison[]) {
-		int i=0;
-		for (i=0; i<=(taille-1); i++) {
+	public void afficherCombinaison(int combinaison[]) {
+		for (int i=0; i<=(taille-1); i++) {
 			System.out.print(combinaison[i]);
 		}
 	}
 	
 	/**
 	 * Méthode permettant la lecture d'une suite de nombres saisis au clavier
-	 * @param taille
 	 * @return tableau d'entier contenant la combinaison à afficher
 	 */
 	
-	public int[] lireCombinaison (int taille){
-		int i=0;
+	public int[] lireCombinaison (){
 		int combinaison[] = new int[taille];
+		int digit=0;
 		System.out.print("Proposition : ");
 		
+		// saisie direct d'une suite d'un entier à la place d'un String
 		Scanner saisie = new Scanner (System.in);
-		String proposition = saisie.nextLine();
+		int proposition = saisie.nextInt();
 		
-		if (proposition.length()!=taille) {
-			System.out.println("vous devez entrer une combinaison de "+taille+" chiffres");
+		// Calcul du nbre de digits de la combinaison lue
+		while ((proposition/(Math.pow(10,digit)))>=1) {
+			digit++;
+		}
+		
+		if (digit!=taille) {
+			System.err.println("vous devez entrer une combinaison de "+taille+" chiffres");
 		} else {
-			for (i=0; i<=proposition.length()-1;i++) {
-				combinaison[i]=proposition.charAt(i)-48;
+			try {
+				for (int i=0; i<(taille);i++) {
+					combinaison[(taille-i-1)] = (int) (proposition % (Math.pow(10,1)));
+					proposition=proposition/10;
+				}
+			} catch(NumberFormatException ex) {
+				System.err.println("vous devez saisir des chiffres compris entre 0 et 9");
 			}
 		}
 		saisie.close();

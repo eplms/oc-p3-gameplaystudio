@@ -10,14 +10,14 @@ public class CombinaisonMastermind extends Combinaison {
 	 * Deuxième digit présent
 	 */
 	
-	public String[] comparerCombinaison (int taille, int combinaison1[], int combinaison2[]){
+	public String[] comparerCombinaison (int combinaison1[], int combinaison2[]){
 		int nombreBienPlaces=0;
 		int nombrePresents=0;
 		int i=0;
 		Boolean[] masqueCombinaison1 = new Boolean[taille];
 		Boolean[] masqueCombinaison2= new Boolean[taille];
 		
-		String comparaison[];
+		String comparaison[] = null;
 		for (i=0; i<= taille-1; i++) {
 			if (combinaison1[i]==combinaison2[i]) {
 				nombreBienPlaces=nombreBienPlaces+1;
@@ -48,7 +48,7 @@ public class CombinaisonMastermind extends Combinaison {
 	 * @taille : taille de la combinaison
 	 * @comparaison : tableau contenant le résultat de la comparaison
 	 */
-	public void afficherResultatComparaison(int taille, String comparaison[]) {
+	public void afficherResultatComparaison(String comparaison[]) {
 		System.out.println("-> Réponse : ");
 		// Transformation des String en Integer
 		int nombreBienPlaces = Integer.parseInt(comparaison[0]);
@@ -63,8 +63,15 @@ public class CombinaisonMastermind extends Combinaison {
 			System.out.println(nombreBienPlaces+" bien places et "+nombrePresents+" présent(s)");
 		}
 	}
-	public void genererProchaineCombinaison() {
-		
-	}
 	
+	
+	
+	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
+		int prochaineCombinaison[] = null;
+		if (nbTentative==0) {
+			prochaineCombinaison= genererCombinaisonAleatoire();
+		}
+		
+		return prochaineCombinaison;
+	}
 }

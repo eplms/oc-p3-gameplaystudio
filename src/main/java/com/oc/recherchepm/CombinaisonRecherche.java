@@ -9,14 +9,15 @@ public class CombinaisonRecherche extends Combinaison{
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison digit par digit
+	 * @param 1 : combinaison à trouver
+	 * @param 2: proposition de l'utilisateur
 	 */
-	public String[] comparerCombinaison (int taille, int combinaison1[], int combinaison2[]) {
-		int i=0;
+	public String[] comparerCombinaison (int combinaison1[], int proposition[]) {
         String resultatComparaison[]= new String [taille];
-        for( i =0; i<=(taille-1);i++) {
-        	if(combinaison1[i]==combinaison2[i]) {
+        for(int i =0; i<=(taille-1);i++) {
+        	if(combinaison1[i]==proposition[i]) {
         		resultatComparaison[i]="=";
-        	}else if (combinaison1[i]>combinaison2[i]) {
+        	}else if (combinaison1[i]>proposition[i]) {
         		resultatComparaison[i]="+";
         	}else {
         		resultatComparaison[i]="-";
@@ -27,20 +28,17 @@ public class CombinaisonRecherche extends Combinaison{
 	
 	/**
 	 * Méthode générant une nouvelle combinaison en fonction du résultat de la comparaison
-	 * @param taille  taille de la combinaison
 	 * @param nbTentative nombre de combinaisons tentée avant celle-ci
 	 * @param combinaison1 combinaison  précédente
 	 * @param resultatComparaison tableau de résultat de la comparaison précédente avec la solution
 	 * @return nouvelle combinaison à partir du résultat
 	 */
-	public int[] genererProchaineCombinaison(int taille,int nbTentative, int combinaison1[], String resultatComparaison[]) {
-    	int i=0;
+	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int prochaineCombinaison[]= new int[taille];
-		CombinaisonRecherche nouvelle= new CombinaisonRecherche();
 	    if (nbTentative == 0) { 
-	    		prochaineCombinaison= nouvelle.genererCombinaisonAleatoire(taille);
+	    		prochaineCombinaison = genererCombinaisonAleatoire();
 	    	}else {
-	    	for (i=0;i<=(taille-1);i++) {
+	    	for (int i=0;i<=(taille-1);i++) {
 	    		if(resultatComparaison[i].equals("=")) {
 	    			prochaineCombinaison[i]=combinaison1[i];
 	    		} else if (resultatComparaison[i].equals("+")) {
@@ -55,15 +53,13 @@ public class CombinaisonRecherche extends Combinaison{
 	
 	/**
 	 * Méthode vérifiant sur la combinaison estJuste à partir du résultat de la comparaison
-	 * @taille : taille de la combinaison
 	 * @resultatComparaison : tableau dans lequel est stocké le résultat de la comparaison
-	 * @return : 
+	 * @return : Boolean indiquant sur la comparaison correspond à une combinaison juste ou fausse
 	 */
-	public boolean estJuste (int taille, String resultatComparaison[]) {
+	public boolean estJuste (String resultatComparaison[]) {
 		boolean resultat;
-		int i=0;
 		int digit=0;
-		for (i=0;i<=taille-1;i++) {
+		for (int i=0;i<=taille-1;i++) {
 			if(resultatComparaison[i].equals("=")){
 				digit=digit+1;
 			}
@@ -81,23 +77,26 @@ public class CombinaisonRecherche extends Combinaison{
 	 * @return resultat de la comparaison saisie
 	 */
 	public String[] lireResultatComparaison() {
+		String []resultatComparaison=new String[taille];
 		System.out.println("-> réponse : ");
+		// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
 		Scanner saisie = new Scanner (System.in);
 		String saisieComparaison = saisie.nextLine();
 		/* découpage de la chaine en caractère et mise dans un tableau */
-		String resultatComparaison[]=saisieComparaison.split("");
+		// String resultatComparaison[]=saisieComparaison.split("");
+		for (int i=0; i<saisieComparaison.length();i++) {
+			resultatComparaison[i]=saisieComparaison.charAt(i)+"";/* ajout de chaine de caractère vide conversion implicite en chaine de caratère*/
+		}
 		saisie.close();
 		return resultatComparaison;
 	}
 
 	/**
 	 *Méthode affichant le résultat de la comparaison entre la proposition du joueur et la combinaison secrete
-	 * @taille : taille de la combinaison
 	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
 	 */
-	public void afficherResultatComparaison(int taille, String resultatComparaison[]) {
-		int i=0;
-		for (i=0;i<=taille-1;i++) {
+	public void afficherResultatComparaison(String resultatComparaison[]) {
+		for (int i=0;i<=taille-1;i++) {
 			System.out.print(resultatComparaison[i]);
 			System.out.println("");
 		}
