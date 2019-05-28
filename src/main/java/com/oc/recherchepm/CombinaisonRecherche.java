@@ -82,10 +82,18 @@ public class CombinaisonRecherche extends Combinaison{
 		// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
 		Scanner saisie = new Scanner (System.in);
 		String saisieComparaison = saisie.nextLine();
+		// test de la taille de la chaine de caractère saisie
+		if (saisieComparaison.length()!=taille) {
+			throw new IllegalArgumentException("Vous devez saisir "+taille+" signes =,+ ou -");
+		}
 		/* découpage de la chaine en caractère et mise dans un tableau */
-		// String resultatComparaison[]=saisieComparaison.split("");
 		for (int i=0; i<saisieComparaison.length();i++) {
-			resultatComparaison[i]=saisieComparaison.charAt(i)+"";/* ajout de chaine de caractère vide conversion implicite en chaine de caratère*/
+			/* ajout de chaine de caractère vide conversion implicite en chaine de caratère*/
+			resultatComparaison[i]=saisieComparaison.charAt(i)+"";
+			//Gestion d'exception si saisie autre que = ou + ou - 
+			if (!((resultatComparaison[i].equals("="))||(resultatComparaison[i].equals("+"))||(resultatComparaison[i].equals("-")))) {
+				throw new IllegalArgumentException ("Vous devez saisir une combinaison de =, + ou - !!!");
+			}
 		}
 		saisie.close();
 		return resultatComparaison;
