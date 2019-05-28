@@ -82,7 +82,8 @@ public class CombinaisonRecherche extends Combinaison{
 		// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
 		Scanner saisie = new Scanner (System.in);
 		String saisieComparaison = saisie.nextLine();
-		// test de la taille de la chaine de caractère saisie
+		saisie.close();
+		// test de la taille de la chaine de caractère saisie		
 		if (saisieComparaison.length()!=taille) {
 			throw new IllegalArgumentException("Vous devez saisir "+taille+" signes =,+ ou -");
 		}
@@ -95,7 +96,6 @@ public class CombinaisonRecherche extends Combinaison{
 				throw new IllegalArgumentException ("Vous devez saisir une combinaison de =, + ou - !!!");
 			}
 		}
-		saisie.close();
 		return resultatComparaison;
 	}
 
