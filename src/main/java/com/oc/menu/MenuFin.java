@@ -3,6 +3,12 @@ package com.oc.menu;
 import com.oc.common.Menu;
 
 public class MenuFin extends Menu{
+	
+	/**
+	 * Méthode d'affichage du menu à la fin du jeu
+	 * @param int jeu correspond au jeu choisi initialement par utilisateur
+	 * @param int mode correspond au mode de jeu choisi initialement par utilisateur
+	 */
 	public void afficherMenuFin(int jeu, int mode) {
 		String intituleJeu;
 		String intituleMode;
@@ -24,6 +30,11 @@ public class MenuFin extends Menu{
 		System.out.println("2- Vous souhaitez jouer à un autre jeu et/ou dans un autre mode ?");
 		System.out.println("");
 	}
+	
+	/**
+	 * Méthode affichant le choix fait par utilisateur à la fin du jeu
+	 * @param int choixMenuFin entier correspondant au choix saisi par utilisateur
+	 */
 	public void afficherChoixMenuFin(int choixMenuFin) {
 		String choixMenu = null;
 		if(choixMenuFin==1) {

@@ -4,6 +4,10 @@ import com.oc.common.Menu;
 
 public class MenuDebut extends Menu{
 	
+	/**
+	 * Méthode d'affichage du menu permettant le choix du jeu
+	 * 
+	 */
 	public void afficherMenuChoixJeu() {
 		System.out.println("Bienvenue dans le jeu !");
 		System.out.println();
@@ -15,7 +19,9 @@ public class MenuDebut extends Menu{
 		System.out.println("Quel est votre choix ?");
 		System.out.println("");
 	}
-	
+	/**
+	 * Méthode d'affcihage du menu permettant le choix du mode de jeu
+	 */
 	public void afficherMenuChoixMode() {
 		System.out.println("");
 		System.out.println("Dans quel mode souhaitez-vous jouer ?");
@@ -28,6 +34,10 @@ public class MenuDebut extends Menu{
 		System.out.println("");
 	}	
 	
+	/**
+	 * Méthode permettant l'affichage du choix du jeu saisie par utilisateur
+	 * @param int choixJeu représentant le choix du jeu saisie
+	 */
 	public void afficherChoixJeuDebut(int choixJeu) {
 		String jeu;
 		if(choixJeu==1) {
@@ -41,6 +51,11 @@ public class MenuDebut extends Menu{
 		System.out.println("Vous avez choisi de jouer au jeu: "+jeu);
 	}
 
+	
+	/**
+	 * Méthode permettant l'affichage du choix du mode de jeu saisie par utilisateur
+	 * @param int choixMode coresspondant aux choix du mode saisie par l'utilisateur
+	 */
 	public void afficherChoixModeDebut(int choixMode) {
 		String mode;
 		if(choixMode==1) {
