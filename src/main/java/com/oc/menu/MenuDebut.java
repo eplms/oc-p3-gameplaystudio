@@ -26,4 +26,27 @@ public class MenuDebut extends Menu{
 		System.out.println();
 		System.out.println("Quel est votre choix ?");
 	}	
+	
+	public static void afficherChoixJeuDebut(int choixJeu) {
+		String jeu;
+		if(choixJeu==1) {
+			jeu="Recherche +/-";
+		} else {
+			jeu="Mastermind";
+		}
+		System.out.println("Vous avez choisi de jouer au jeu: "+jeu);
+	}
+
+	public static void afficherChoixModeDebut(int choixMode) {
+		String mode;
+		if(choixMode==1) {
+			mode="Challenger";
+		}else if(choixMode==2) {
+			mode="Défenseur";
+		} else {
+			mode="Duel";
+		}
+		
+		System.out.println("Vous avez choisi de jouer en mode "+mode+".");		
+	}
 }

@@ -11,33 +11,20 @@ public class Main {
 		// TODO Auto-generated method stub
 		int choixJeu;
 		int choixMode;
-		String jeu=null;
-		String mode=null;
 		MenuDebut menu1= new MenuDebut();
+		
+		//Lancement, lecture et affichage du choix du jeu
 		menu1.afficherMenuChoixJeu();
 		choixJeu= menu1.lireChoixMenu();
+		MenuDebut.afficherChoixJeuDebut(choixJeu);
 		
-		
-		if(choixJeu==1) {
-			jeu="Recherche +/-";
-		} else {
-			jeu="Mastermind";
-		}
-		System.out.println("Vous avez choisi de jouer au jeu: "+jeu);
-		
+		//Lancement, lecture et affcihage du choix du mode
 		MenuDebut menu2=new MenuDebut();
 		menu2.afficherMenuChoixMode();
 		choixMode=menu2.lireChoixMenu();
 		
-		if(choixMode==1) {
-			mode="Challenger";
-		}else if(choixMode==2) {
-			mode="Défenseur";
-		} else {
-			mode="Duel";
-		}
+		MenuDebut.afficherChoixModeDebut(choixMode);
 		
-		System.out.println("Vous avez choisi de jouer en mode "+mode+".");
 		
 		/**
 		 * Lecture du nombre d'essais max pour trouver combinaison
