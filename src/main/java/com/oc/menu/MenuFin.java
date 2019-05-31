@@ -4,8 +4,22 @@ import com.oc.common.Menu;
 
 public class MenuFin extends Menu{
 	public void afficherMenuFin(int jeu, int mode) {
+		String intituleJeu;
+		String intituleMode;
 		System.out.println("Que souhaitez-faire ?");
-		System.out.println("1- Vous souhaitez rejouer ?");
+		if(jeu==1) {
+			intituleJeu="Recherche +/-";
+		} else {
+			intituleJeu="Mastermind";
+		}
+		if(mode==1) {
+			intituleMode="Challenger";
+		}else if(mode==2) {
+			intituleMode="Défenseur";
+		} else {
+			intituleMode="Duel";
+		}
+		System.out.println("1- Vous souhaitez rejouer à "+intituleJeu+" en mode "+intituleMode+" ?");
 		System.out.println("2- Vous souhaitez jouer à un autre jeu et/ou dans un autre mode ?");
 	}
 	public void afficherChoixMenuFin(int choixMenuFin) {
