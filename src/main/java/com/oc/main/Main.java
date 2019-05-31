@@ -28,9 +28,7 @@ public class Main {
 		
 		//Lancement, lecture et affichage du menu de fin
 		MenuFin menu3=new MenuFin();
-		int jeu=2;
-		int mode=2;
-		menu3.afficherMenuFin(jeu, mode);
+		menu3.afficherMenuFin(choixJeu, choixMode);
 		choixMenuFin=menu3.lireChoixMenu();
 		menu3.afficherChoixMenuFin(choixMenuFin);
 		

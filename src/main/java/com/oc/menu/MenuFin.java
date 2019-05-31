@@ -6,6 +6,7 @@ public class MenuFin extends Menu{
 	public void afficherMenuFin(int jeu, int mode) {
 		String intituleJeu;
 		String intituleMode;
+		System.out.println("");
 		System.out.println("Que souhaitez-faire ?");
 		if(jeu==1) {
 			intituleJeu="Recherche +/-";
@@ -21,6 +22,7 @@ public class MenuFin extends Menu{
 		}
 		System.out.println("1- Vous souhaitez rejouer à "+intituleJeu+" en mode "+intituleMode+" ?");
 		System.out.println("2- Vous souhaitez jouer à un autre jeu et/ou dans un autre mode ?");
+		System.out.println("");
 	}
 	public void afficherChoixMenuFin(int choixMenuFin) {
 		String choixMenu = null;
@@ -28,7 +30,10 @@ public class MenuFin extends Menu{
 			choixMenu="Vous avez choisi de jouer au même jeu";
 		}else if(choixMenuFin==2) {
 			choixMenu="Vous avez choisi de jouer à un autre jeu et/ou dans un autre mode";
+		} else {
+			throw new IllegalArgumentException ("Vous devez choisir 1 ou 2");
 		}
+		System.out.println("");
 		System.out.println(choixMenu);		
 		
 	}
