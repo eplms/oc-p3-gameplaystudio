@@ -1,7 +1,5 @@
 package com.oc.menu;
 
-import java.util.Scanner;
-
 import com.oc.common.Menu;
 
 public class MenuDebut extends Menu{
@@ -27,7 +25,7 @@ public class MenuDebut extends Menu{
 		System.out.println("Quel est votre choix ?");
 	}	
 	
-	public static void afficherChoixJeuDebut(int choixJeu) {
+	public void afficherChoixJeuDebut(int choixJeu) {
 		String jeu;
 		if(choixJeu==1) {
 			jeu="Recherche +/-";
@@ -37,7 +35,7 @@ public class MenuDebut extends Menu{
 		System.out.println("Vous avez choisi de jouer au jeu: "+jeu);
 	}
 
-	public static void afficherChoixModeDebut(int choixMode) {
+	public void afficherChoixModeDebut(int choixMode) {
 		String mode;
 		if(choixMode==1) {
 			mode="Challenger";
@@ -46,7 +44,19 @@ public class MenuDebut extends Menu{
 		} else {
 			mode="Duel";
 		}
-		
 		System.out.println("Vous avez choisi de jouer en mode "+mode+".");		
 	}
+
+	@Override
+	public void afficherMenuFin(int jeu, int mode) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void afficherChoixMenuFin(int choixMenuFin) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

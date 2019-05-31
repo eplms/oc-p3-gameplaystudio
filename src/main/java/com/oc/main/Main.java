@@ -3,28 +3,36 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.oc.menu.MenuDebut;
+import com.oc.menu.MenuFin;
 import com.oc.utilitaire.GestionConfiguration;
 
 public class Main {
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 	public static void main(String[] args) throws Exception {
-		// TODO Auto-generated method stub
 		int choixJeu;
 		int choixMode;
-		MenuDebut menu1= new MenuDebut();
+		int choixMenuFin;
+
 		
 		//Lancement, lecture et affichage du choix du jeu
+		MenuDebut menu1= new MenuDebut();
 		menu1.afficherMenuChoixJeu();
 		choixJeu= menu1.lireChoixMenu();
-		MenuDebut.afficherChoixJeuDebut(choixJeu);
+		menu1.afficherChoixJeuDebut(choixJeu);
 		
 		//Lancement, lecture et affcihage du choix du mode
 		MenuDebut menu2=new MenuDebut();
 		menu2.afficherMenuChoixMode();
 		choixMode=menu2.lireChoixMenu();
+		menu2.afficherChoixModeDebut(choixMode);
 		
-		MenuDebut.afficherChoixModeDebut(choixMode);
-		
+		//Lancement, lecture et affichage du menu de fin
+		MenuFin menu3=new MenuFin();
+		int jeu=2;
+		int mode=2;
+		menu3.afficherMenuFin(jeu, mode);
+		choixMenuFin=menu3.lireChoixMenu();
+		menu3.afficherChoixMenuFin(choixMenuFin);
 		
 		/**
 		 * Lecture du nombre d'essais max pour trouver combinaison
