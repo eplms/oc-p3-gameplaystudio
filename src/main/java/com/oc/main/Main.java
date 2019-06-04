@@ -2,35 +2,15 @@ package com.oc.main;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.oc.menu.MenuDebut;
-import com.oc.menu.MenuFin;
+import com.oc.common.Lanceur;
 import com.oc.utilitaire.GestionConfiguration;
 
 public class Main {
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 	public static void main(String[] args) throws Exception {
-		int choixJeu;
-		int choixMode;
-		int choixMenuFin;
-
 		
-		//Lancement, lecture et affichage du choix du jeu
-		MenuDebut menu1= new MenuDebut();
-		menu1.afficherMenuChoixJeu();
-		choixJeu= menu1.lireChoixMenu();
-		menu1.afficherChoixJeuDebut(choixJeu);
-		
-		//Lancement, lecture et affcihage du choix du mode
-		MenuDebut menu2=new MenuDebut();
-		menu2.afficherMenuChoixMode();
-		choixMode=menu2.lireChoixMenu();
-		menu2.afficherChoixModeDebut(choixMode);
-		
-		//Lancement, lecture et affichage du menu de fin
-		MenuFin menu3=new MenuFin();
-		menu3.afficherMenuFin(choixJeu, choixMode);
-		choixMenuFin=menu3.lireChoixMenu();
-		menu3.afficherChoixMenuFin(choixMenuFin);
+		Lanceur jeu=new Lanceur();		
+		jeu.lancerMenu();
 		
 		/**
 		 * Lecture du nombre d'essais max pour trouver combinaison
