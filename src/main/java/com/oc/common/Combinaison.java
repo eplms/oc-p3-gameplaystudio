@@ -67,5 +67,6 @@ public abstract class Combinaison implements ICombinaison{
 		saisie.close();
 		return combinaison;
 	}
+
 	
 }

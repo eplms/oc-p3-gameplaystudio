@@ -6,6 +6,7 @@ import com.oc.common.Combinaison;
 
 public class CombinaisonRecherche extends Combinaison{
 	
+	
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison digit par digit
@@ -21,7 +22,7 @@ public class CombinaisonRecherche extends Combinaison{
         		resultatComparaison[i]="+";
         	}else {
         		resultatComparaison[i]="-";
-        	}
+        	}	
         }
         return resultatComparaison;
 	}

@@ -21,6 +21,7 @@ public class Lanceur{
 			finDuJeu=true;
 			} else {
 				System.out.println("le jeu se lance \n");
+				// lancement du bon jeu dans le bon mode
 				while (!finDuJeu) {
 					choixFin=lancerMenuFin();
 					if(choixFin==1) {
