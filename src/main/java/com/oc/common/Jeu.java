@@ -1,24 +1,13 @@
 package com.oc.common;
 
-import com.oc.recherchepm.JeuRecherche;
 import com.oc.utilitaire.GestionConfiguration;
 
 public abstract class Jeu implements IJeu{
 	private int taille;
 	private int nombreEssai;
 	private boolean modeDeveloppeur;
-	
-	public void lancementJeu(int choixMode, int choixJeu) {
-		initialiserParametreJeu();
-		if (choixJeu==1) {
-			JeuRecherche jeuRecherche=new JeuRecherche();
-			jeuRecherche.lancerJeuRecherche(choixMode);
-		} else if(choixJeu==2) {
-			// lancer le jeuMastermind en passant le paramètre de mode
-		}
-	}
-	
-	private void initialiserParametreJeu() {		
+		
+	protected void initialiserParametreJeu() {		
 		// initialisation de la taille de la combinaison à partir du fichier de configuration
 		setTaille(lireTailleCombinaison());
 		// initialisation du nombre d'essai max autorisé à partir du fichier de configuration

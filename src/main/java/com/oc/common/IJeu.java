@@ -1,7 +1,6 @@
 package com.oc.common;
 
 public interface IJeu {
-	public void lancementJeu(int choixMode, int choixJeu);
 	public int getTaille();
 	public void setTaille(int taille);
 	public int getNombreEssai();

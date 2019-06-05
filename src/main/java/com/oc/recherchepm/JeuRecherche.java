@@ -5,6 +5,7 @@ import com.oc.common.Jeu;
 public class JeuRecherche extends Jeu {
 	
 	public void lancerJeuRecherche(int choixMode) {
+		initialiserParametreJeu();
 		if (choixMode==1) {
 			jouerChallenger();
 		}else if (choixMode==2) {

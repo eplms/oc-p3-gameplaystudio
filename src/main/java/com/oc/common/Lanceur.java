@@ -1,5 +1,6 @@
 package com.oc.common;
 
+import com.oc.recherchepm.JeuRecherche;
 
 public class Lanceur{
 
@@ -22,6 +23,10 @@ public class Lanceur{
 			} else {
 				System.out.println("le jeu se lance \n");
 				// lancement du bon jeu dans le bon mode
+				if (choixJeux==1) {
+					JeuRecherche jeu1= new JeuRecherche();
+					jeu1.lancerJeuRecherche(choixMode);
+				}
 				while (!finDuJeu) {
 					choixFin=lancerMenuFin();
 					if(choixFin==1) {
