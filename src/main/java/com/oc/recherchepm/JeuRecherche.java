@@ -30,10 +30,9 @@ public class JeuRecherche extends Jeu {
 			nbTry=nbTry+1;
 		}while ( !resultat && nbTry<getNombreEssai());
 		if (resultat) {
-			System.out.println("Vous avez gagné");
+			System.out.println("\nVous avez gagné");
 		}else {
-			System.out.println("");
-			System.out.println("Vous avez perdu\n");
+			System.out.println("\nVous avez perdu\n");
 		}
 	}
 	
@@ -51,6 +50,11 @@ public class JeuRecherche extends Jeu {
 			resultat=combinaison1.estJuste(resultatComparaison);
 			nbTry=nbTry+1;
 		}while (!resultat && nbTry<getNombreEssai());
+		if (!resultat) {
+			System.out.println("\nVous avez gagné");
+		}else {
+			System.out.println("\nVous avez perdu\n");
+		}
 		
 	}
 
@@ -79,8 +83,9 @@ public class JeuRecherche extends Jeu {
 			//partie mode defenseur
 			propositionAi=combinaison3.genererProchaineCombinaison(nbTry, propositionAi, resultatComparaisonUtil);
 			combinaison3.afficherCombinaison(propositionAi);
-			String comparaison[]=combinaison3.lireResultatComparaison();
-			resultatAiJuste=combinaison3.estJuste(comparaison);
+			resultatComparaisonUtil=combinaison3.lireResultatComparaison();
+			resultatAiJuste=combinaison3.estJuste(resultatComparaisonUtil);
+			nbTry=nbTry+1;
 		}while ( !resultatAiJuste && !resultatUtilJuste && nbTry<getNombreEssai());
 		
 		if (resultatAiJuste && resultatUtilJuste) {

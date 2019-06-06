@@ -34,8 +34,9 @@ public abstract class Combinaison implements ICombinaison{
 	 * @param combinaison tableau contenant la combinaison à afficher
 	 */
 	public void afficherCombinaison(int combinaison[]) {
+		System.out.println("\nProposition de l'AI");
 		for (int i=0; i<=(taille-1); i++) {
-			System.out.print(combinaison[i]);
+			System.out.print(+combinaison[i]);
 		}
 	}
 	
@@ -47,7 +48,7 @@ public abstract class Combinaison implements ICombinaison{
 	public int[] lireCombinaison (){
 		int combinaison[] = new int[taille];
 		int digit=0;
-		System.out.print("\nProposition : ");
+		System.out.print("\nVotre Proposition : ");
 		
 		// saisie direct d'une suite d'un entier à la place d'un String
 		int proposition = saisieCombi.nextInt();

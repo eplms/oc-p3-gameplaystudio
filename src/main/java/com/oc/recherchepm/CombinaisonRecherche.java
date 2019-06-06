@@ -83,7 +83,7 @@ public class CombinaisonRecherche extends Combinaison{
 	 */
 	public String[] lireResultatComparaison() {
 		String []resultatComparaison=new String[taille];
-		System.out.println("-> réponse : ");
+		System.out.println("\n-> votre réponse : ");
 		// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
 		String saisieComparaison = saisieComp.nextLine();
 		//saisie.close();
@@ -108,6 +108,7 @@ public class CombinaisonRecherche extends Combinaison{
 	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
 	 */
 	public void afficherResultatComparaison(String resultatComparaison[]) {
+		System.out.println("Résultat :");
 		for (int i=0;i<=taille-1;i++) {
 			System.out.print(resultatComparaison[i]);
 		}
