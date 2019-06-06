@@ -3,7 +3,8 @@ package com.oc.common;
 import java.util.Scanner;
 
 public abstract class Menu implements IMenu {	
-	Scanner saisie= new Scanner(System.in );
+
+	Scanner saisie=new Scanner(System.in);
 
 	/**
 	 * Méthode d'affichage d'un menu
@@ -22,7 +23,7 @@ public abstract class Menu implements IMenu {
 			int choixMenu = saisie.nextInt();
 			if (choixMenu > nombreItem) {
 				System.out.println("choix incorrect : vous devez saisir un nombre compris entre O et "+nombreItem);
-		}	
+			}	
 		return choixMenu;
 	}
 }

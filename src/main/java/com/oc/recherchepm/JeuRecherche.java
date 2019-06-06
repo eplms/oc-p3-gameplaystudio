@@ -4,14 +4,15 @@ import com.oc.common.Jeu;
 
 public class JeuRecherche extends Jeu {
 	
+	
 	public void lancerJeuRecherche(int choixMode) {
 		initialiserParametreJeu();
-		if (choixMode==1) {
-			jouerChallenger();
-		}else if (choixMode==2) {
-			jouerDefenseur();
-		}else if (choixMode==3) {
-			jouerDuel();
+		switch (choixMode){
+			case 1: jouerChallenger();
+					break;
+			case 2: jouerDefenseur();
+					break;
+			case 3: jouerDuel();
 		}
 	}
 	
@@ -21,7 +22,6 @@ public class JeuRecherche extends Jeu {
 		int nbTry=0;
 		boolean resultat=false;
 		int combinaisonSecrete[]=combinaison1.genererCombinaisonAleatoire();
-	
 		do {
 			int proposition []= combinaison2.lireCombinaison();
 			String comparaison []=combinaison2.comparerCombinaison(combinaisonSecrete, proposition);
@@ -97,8 +97,5 @@ public class JeuRecherche extends Jeu {
 		}else {
 			System.out.println("tout le monde a perdu !");
 		}
-		
 	}
-
-	
 }

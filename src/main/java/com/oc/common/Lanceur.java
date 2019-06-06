@@ -13,39 +13,19 @@ public class Lanceur{
 		int choixJeux;
 		int choixMode;
 		int choixFin;
-		choixJeux=lancerMenuJeu();
-		if (choixJeux==3) {
-			finDuJeu=true;
-		} else {
+		do {
+			choixJeux=lancerMenuJeu();
 			choixMode=lancerMenuMode();
-			if (choixMode==4) {
-			finDuJeu=true;
-			} else {
+			do {
 				lancerJeu(choixJeux,choixMode);
-				}
-				while (!finDuJeu) {
-					choixFin=lancerMenuFin();
-					if(choixFin==1) {
-						lancerJeu(choixJeux,choixMode);
-					}else if(choixFin==2){
-						choixJeux=lancerMenuJeu();
-						if (choixJeux==3) {
-							finDuJeu=true;
-						}else {	
-							choixMode=lancerMenuMode();
-							if(choixMode==4) {
-								finDuJeu=true;
-							} else {
-								lancerJeu(choixJeux,choixMode);
-							}
-						}
-					} else if(choixFin==3) {
-						finDuJeu=true;
-						}
-				}
+				choixFin=lancerMenuFin();
+			}while (choixFin==1);
+			if(choixFin==3) {
+				finDuJeu=true;
 			}
-		}	
-	
+		}while(!finDuJeu); 
+	}
+		
 	/**
 	 * Affichage du menu de choix du jeu et lecture du choix utilisateur
 	 * @return Choix du jeu fait par l'utilisateur
@@ -95,7 +75,6 @@ public class Lanceur{
 		menuFin.afficherMenu(menuFin.getTexteMenu());
 		choixFin= menuFin.lireChoixMenu(menuFin.getNombreItem());
 		return choixFin;
-		
 	}
 	/**
 	 * lancement du jeu choisi dans le mode choisi
