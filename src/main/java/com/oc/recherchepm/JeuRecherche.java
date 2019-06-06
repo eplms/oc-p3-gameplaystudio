@@ -16,8 +16,8 @@ public class JeuRecherche extends Jeu {
 	}
 	
 	private void jouerChallenger () {
-		CombinaisonRecherche combinaison1 = new CombinaisonRecherche();
-		CombinaisonRecherche combinaison2 = new CombinaisonRecherche();
+		CombinaisonRecherche combinaison1 = new CombinaisonRecherche(getTaille());
+		CombinaisonRecherche combinaison2 = new CombinaisonRecherche(getTaille());
 		int nbTry=0;
 		boolean resultat=false;
 		int combinaisonSecrete[]=combinaison1.genererCombinaisonAleatoire();
@@ -29,6 +29,12 @@ public class JeuRecherche extends Jeu {
 			resultat=combinaison2.estJuste(comparaison);
 			nbTry=nbTry+1;
 		}while ( !resultat && nbTry<getNombreEssai());
+		if (resultat) {
+			System.out.println("Vous avez gagné");
+		}else {
+			System.out.println("");
+			System.out.println("Vous avez perdu\n");
+		}
 	}
 	
 	
@@ -36,13 +42,13 @@ public class JeuRecherche extends Jeu {
 		int proposition[] =new int[getTaille()];
 		int nbTry=0;
 		boolean resultat=false;
-		CombinaisonRecherche combinaison1= new CombinaisonRecherche();
+		CombinaisonRecherche combinaison1= new CombinaisonRecherche(getTaille());
 		String resultatComparaison[]=new String[getTaille()];
 		do {
 			proposition=combinaison1.genererProchaineCombinaison(nbTry, proposition, resultatComparaison);
 			combinaison1.afficherCombinaison(proposition);
-			String comparaison[]=combinaison1.lireResultatComparaison();
-			resultat=combinaison1.estJuste(comparaison);
+			resultatComparaison=combinaison1.lireResultatComparaison();
+			resultat=combinaison1.estJuste(resultatComparaison);
 			nbTry=nbTry+1;
 		}while (!resultat && nbTry<getNombreEssai());
 		
@@ -53,15 +59,15 @@ public class JeuRecherche extends Jeu {
 		boolean resultatAiJuste=false;
 		boolean resultatUtilJuste=false;
 		// instance représentant la combinaison secrete de l'AI
-		CombinaisonRecherche combinaison1 =new CombinaisonRecherche();
+		CombinaisonRecherche combinaison1 =new CombinaisonRecherche(getTaille());
 		// instance representant les proposition de l'utilisateur
-		CombinaisonRecherche combinaison2= new CombinaisonRecherche();
+		CombinaisonRecherche combinaison2= new CombinaisonRecherche(getTaille());
 		int combinaisonSecreteAi[]=combinaison1.genererCombinaisonAleatoire();
 		int propositionAi[]=new int[getTaille()];
 		String resultatComparaisonUtil[]=new String [getTaille()];
 		
 		// instance représentant les proposition de l'AI
-		CombinaisonRecherche combinaison3 = new CombinaisonRecherche();
+		CombinaisonRecherche combinaison3 = new CombinaisonRecherche(getTaille());
 		
 		do {
 			// partie mode challenger 

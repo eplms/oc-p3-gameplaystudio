@@ -6,10 +6,16 @@ public abstract class Combinaison implements ICombinaison{
 	protected int taille;
 	protected int combinaison[];
 	protected int historique;
-	
-	/** Méthode de génération aléatoire de combinaison
+	Scanner saisieCombi = new Scanner (System.in);
+
+	/** Méthode de génération aléatoire de combinaisons
 	 * @return tableau d'entier constituant la combinaison	
 	 */
+	
+	public Combinaison (int taille) {
+		this.taille=taille;
+	}
+	
 	public int[] genererCombinaisonAleatoire() {
 		int i;
 		double digit;
@@ -41,17 +47,15 @@ public abstract class Combinaison implements ICombinaison{
 	public int[] lireCombinaison (){
 		int combinaison[] = new int[taille];
 		int digit=0;
-		System.out.print("Proposition : ");
+		System.out.print("\nProposition : ");
 		
 		// saisie direct d'une suite d'un entier à la place d'un String
-		Scanner saisie = new Scanner (System.in);
-		int proposition = saisie.nextInt();
+		int proposition = saisieCombi.nextInt();
 		
 		// Calcul du nbre de digits de la combinaison lue
 		while ((proposition/(Math.pow(10,digit)))>=1) {
 			digit++;
 		}
-		
 		if (digit!=taille) {
 			System.err.println("vous devez entrer une combinaison de "+taille+" chiffres");
 		} else {
@@ -64,9 +68,6 @@ public abstract class Combinaison implements ICombinaison{
 				System.err.println("vous devez saisir des chiffres compris entre 0 et 9");
 			}
 		}
-		saisie.close();
 		return combinaison;
 	}
-
-	
 }

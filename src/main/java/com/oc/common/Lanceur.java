@@ -21,16 +21,12 @@ public class Lanceur{
 			if (choixMode==4) {
 			finDuJeu=true;
 			} else {
-				System.out.println("le jeu se lance \n");
-				// lancement du bon jeu dans le bon mode
-				if (choixJeux==1) {
-					JeuRecherche jeu1= new JeuRecherche();
-					jeu1.lancerJeuRecherche(choixMode);
+				lancerJeu(choixJeux,choixMode);
 				}
 				while (!finDuJeu) {
 					choixFin=lancerMenuFin();
 					if(choixFin==1) {
-						System.out.println("lancement du même jeu dans le même mode");
+						lancerJeu(choixJeux,choixMode);
 					}else if(choixFin==2){
 						choixJeux=lancerMenuJeu();
 						if (choixJeux==3) {
@@ -40,7 +36,7 @@ public class Lanceur{
 							if(choixMode==4) {
 								finDuJeu=true;
 							} else {
-								System.out.println("le jeu se lance \n");
+								lancerJeu(choixJeux,choixMode);
 							}
 						}
 					} else if(choixFin==3) {
@@ -49,7 +45,6 @@ public class Lanceur{
 				}
 			}
 		}	
-	}
 	
 	/**
 	 * Affichage du menu de choix du jeu et lecture du choix utilisateur
@@ -101,6 +96,20 @@ public class Lanceur{
 		choixFin= menuFin.lireChoixMenu(menuFin.getNombreItem());
 		return choixFin;
 		
+	}
+	/**
+	 * lancement du jeu choisi dans le mode choisi
+	 * @param choixJeux correspond au jeu choisi
+	 * @param choixMode correspond au mode choisi
+	 */
+	
+	private void lancerJeu(int choixJeux, int choixMode) {
+		if (choixJeux==1) {
+			JeuRecherche jeu1= new JeuRecherche();
+			jeu1.lancerJeuRecherche(choixMode);
+		} else if (choixJeux==2) {
+			System.out.println("lancement du jeu Mastermind");
+		}
 	}
 }
 

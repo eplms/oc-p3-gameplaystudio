@@ -5,8 +5,12 @@ import java.util.Scanner;
 import com.oc.common.Combinaison;
 
 public class CombinaisonRecherche extends Combinaison{
-	
-	
+	Scanner saisieComp = new Scanner (System.in);
+
+	public CombinaisonRecherche(int taille) {
+		super(taille);
+	}
+
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison digit par digit
@@ -81,9 +85,8 @@ public class CombinaisonRecherche extends Combinaison{
 		String []resultatComparaison=new String[taille];
 		System.out.println("-> réponse : ");
 		// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
-		Scanner saisie = new Scanner (System.in);
-		String saisieComparaison = saisie.nextLine();
-		saisie.close();
+		String saisieComparaison = saisieComp.nextLine();
+		//saisie.close();
 		// test de la taille de la chaine de caractère saisie		
 		if (saisieComparaison.length()!=taille) {
 			throw new IllegalArgumentException("Vous devez saisir "+taille+" signes =,+ ou -");
@@ -107,8 +110,15 @@ public class CombinaisonRecherche extends Combinaison{
 	public void afficherResultatComparaison(String resultatComparaison[]) {
 		for (int i=0;i<=taille-1;i++) {
 			System.out.print(resultatComparaison[i]);
-			System.out.println("");
 		}
+	}
+
+	public int getTaille() {
+		return taille;
+	}
+
+	public void setTaille(int taille) {
+		this.taille = taille;
 	}
 }
 	
