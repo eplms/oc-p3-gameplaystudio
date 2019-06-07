@@ -3,6 +3,10 @@ package com.oc.mastermind;
 import com.oc.common.Combinaison;
 
 public class CombinaisonMastermind extends Combinaison {
+	public CombinaisonMastermind(int taille) {
+		super(taille);
+	}
+
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison
@@ -64,8 +68,6 @@ public class CombinaisonMastermind extends Combinaison {
 		}
 	}
 	
-	
-	
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int prochaineCombinaison[] = null;
 		if (nbTentative==0) {
@@ -74,4 +76,19 @@ public class CombinaisonMastermind extends Combinaison {
 		
 		return prochaineCombinaison;
 	}
+	
+	
+	public boolean estJuste (String resultatComparaison[]) {
+		boolean resultat=false;
+		return resultat;
+		
+	}
+	
+	
+	public String[] lireResultatComparaison() {
+		String []resultatComparaison=new String[taille];
+
+		return resultatComparaison;
+		}
+	
 }
