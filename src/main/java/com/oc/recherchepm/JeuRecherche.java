@@ -23,7 +23,7 @@ public class JeuRecherche extends Jeu {
 		boolean resultat=false;
 		int combinaisonSecrete[]=combinaison1.genererCombinaisonAleatoire();
 		do {
-			int proposition []= combinaison2.lireCombinaison();
+			int proposition []= combinaison2.lireCombinaison(getTaille());
 			String comparaison []=combinaison2.comparerCombinaison(combinaisonSecrete, proposition);
 			combinaison2.afficherResultatComparaison(comparaison);
 			resultat=combinaison2.estJuste(comparaison);
@@ -75,7 +75,7 @@ public class JeuRecherche extends Jeu {
 		
 		do {
 			// partie mode challenger 
-			int propositionUtilisateur[]=combinaison2.lireCombinaison();
+			int propositionUtilisateur[]=combinaison2.lireCombinaison(getTaille());
 			String resultatComparaisonAi[]=combinaison2.comparerCombinaison(combinaisonSecreteAi, propositionUtilisateur);
 			combinaison2.afficherResultatComparaison(resultatComparaisonAi);
 			resultatUtilJuste=combinaison2.estJuste(resultatComparaisonAi);

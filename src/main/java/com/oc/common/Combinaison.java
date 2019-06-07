@@ -45,20 +45,21 @@ public abstract class Combinaison implements ICombinaison{
 	 * @return tableau d'entier contenant la combinaison à afficher
 	 */
 	
-	public int[] lireCombinaison (){
+	public int[] lireCombinaison (int taille){
 		int combinaison[] = new int[taille];
 		int digit=0;
+			
 		System.out.print("\nVotre Proposition : ");
-		
+		System.out.println(taille);
 		// saisie direct d'une suite d'un entier à la place d'un String
 		int proposition = saisieCombi.nextInt();
 		
 		// Calcul du nbre de digits de la combinaison lue
-		while ((proposition/(Math.pow(10,digit)))>=1) {
+		while ((proposition/(Math.pow(10,digit)))>=1){
 			digit++;
-		}
+			}
 		if (digit!=taille) {
-			System.err.println("vous devez entrer une combinaison de "+taille+" chiffres");
+				System.err.println("vous devez entrer une combinaison de "+taille+" chiffres");
 		} else {
 			try {
 				for (int i=0; i<(taille);i++) {

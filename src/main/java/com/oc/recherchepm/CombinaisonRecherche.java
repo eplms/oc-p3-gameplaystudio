@@ -5,11 +5,13 @@ import java.util.Scanner;
 import com.oc.common.Combinaison;
 
 public class CombinaisonRecherche extends Combinaison{
-	Scanner saisieComp = new Scanner (System.in);
-
 	public CombinaisonRecherche(int taille) {
 		super(taille);
 	}
+
+	Scanner saisieComp = new Scanner (System.in);
+
+
 
 	/**
 	 * méthode de comparaison de deux combinaisons

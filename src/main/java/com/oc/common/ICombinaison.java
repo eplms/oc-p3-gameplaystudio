@@ -7,7 +7,7 @@ public interface ICombinaison {
 	public boolean estJuste(String resultatComparaison[]);
 	
 	// Mode Challenger & duel
-	public int[] lireCombinaison ();
+	public int[] lireCombinaison (int taille);
 	public void afficherResultatComparaison(String resultatComparaison[]);
 	public String[] comparerCombinaison (int combinaison1[], int combinaison2[]);
 	
