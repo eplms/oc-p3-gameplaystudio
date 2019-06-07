@@ -7,7 +7,7 @@ public abstract class Jeu implements IJeu{
 	private int nombreEssai;
 	private boolean modeDeveloppeur;
 		
-	protected void initialiserParametreJeu() {		
+	public void initialiserParametresJeu() {		
 		// initialisation de la taille de la combinaison à partir du fichier de configuration
 		setTaille(lireTailleCombinaison());
 		// initialisation du nombre d'essai max autorisé à partir du fichier de configuration

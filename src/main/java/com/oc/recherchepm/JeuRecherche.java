@@ -5,8 +5,8 @@ import com.oc.common.Jeu;
 public class JeuRecherche extends Jeu {
 	
 	
-	public void lancerJeuRecherche(int choixMode) {
-		initialiserParametreJeu();
+	public void lancerJeu(int choixMode) {
+		initialiserParametresJeu();
 		switch (choixMode){
 			case 1: jouerChallenger();
 					break;
@@ -98,4 +98,5 @@ public class JeuRecherche extends Jeu {
 			System.out.println("tout le monde a perdu !");
 		}
 	}
+	
 }

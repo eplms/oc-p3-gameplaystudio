@@ -85,7 +85,7 @@ public class Lanceur{
 	private void lancerJeu(int choixJeux, int choixMode) {
 		if (choixJeux==1) {
 			JeuRecherche jeu1= new JeuRecherche();
-			jeu1.lancerJeuRecherche(choixMode);
+			jeu1.lancerJeu(choixMode);
 		} else if (choixJeux==2) {
 			System.out.println("lancement du jeu Mastermind");
 		}

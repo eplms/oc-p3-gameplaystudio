@@ -4,6 +4,7 @@ import java.util.ResourceBundle;
 
 public class GestionConfiguration {
 	/* Déclaration objet configuration et lecture du fichier config.properties dans l'objet configuration */
+	// "config" est le nom du fichier .properties
 	static ResourceBundle configuration = ResourceBundle.getBundle("config");
 	
 	/**
