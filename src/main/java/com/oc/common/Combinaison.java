@@ -50,7 +50,7 @@ public abstract class Combinaison implements ICombinaison{
 		int digit=0;
 			
 		System.out.print("\nVotre Proposition : ");
-		System.out.println(taille);
+		//System.out.println(taille);
 		// saisie direct d'une suite d'un entier à la place d'un String
 		int proposition = saisieCombi.nextInt();
 		

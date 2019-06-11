@@ -30,9 +30,9 @@ public class JeuRecherche extends Jeu {
 			nbTry=nbTry+1;
 		}while ( !resultat && nbTry<getNombreEssai());
 		if (resultat) {
-			System.out.println("\nVous avez gagné");
+			System.out.println("\nVous avez trouvé la bonne combinaison ! Félicitations !");
 		}else {
-			System.out.println("\nVous avez perdu\n");
+			System.out.println("\nVous avez atteint le nombre max de tentative ! désolé !\n");
 		}
 	}
 	
@@ -51,9 +51,9 @@ public class JeuRecherche extends Jeu {
 			nbTry=nbTry+1;
 		}while (!resultat && nbTry<getNombreEssai());
 		if (!resultat) {
-			System.out.println("\nVous avez gagné");
+			System.out.println("\nVous avez trouvé la bonne combinaison ! Félicitations !");
 		}else {
-			System.out.println("\nVous avez perdu\n");
+			System.out.println("\nVous avez atteint le nombre max de tentative ! désolé !\\n");
 		}
 		
 	}
@@ -89,13 +89,13 @@ public class JeuRecherche extends Jeu {
 		}while ( !resultatAiJuste && !resultatUtilJuste && nbTry<getNombreEssai());
 		
 		if (resultatAiJuste && resultatUtilJuste) {
-			System.out.println("Egalité !");
+			System.out.println("Egalité : l'IA et vous avez trouvé la bonne solution en même temps!");
 		}else if(resultatAiJuste && !resultatUtilJuste) {
-			System.out.println("Vous avez perdu !");
+			System.out.println(" L'IA a trouvé la bonne combinaison avant vous : Vous avez perdu ! Désolé");
 		}else if (!resultatAiJuste && resultatUtilJuste) {
 			System.out.println("Vous avez gagné !");
 		}else {
-			System.out.println("tout le monde a perdu !");
+			System.out.println("Vous et l'IA avez atteint le nombre max de tentatives ! Personne en gagne !");
 		}
 	}
 	
