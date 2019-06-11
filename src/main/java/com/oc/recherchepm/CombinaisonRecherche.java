@@ -43,7 +43,9 @@ public class CombinaisonRecherche extends Combinaison{
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int prochaineCombinaison[]= new int[taille];
 	    if (nbTentative == 0) { 
-	    		prochaineCombinaison = genererCombinaisonAleatoire();
+	    	for (int i=0;i<=(taille-1);i++) {
+	    		prochaineCombinaison[i] = 5;
+	    		}
 	    	}else {
 	    	for (int i=0;i<=(taille-1);i++) {
 	    		if(resultatComparaison[i].equals("=")) {

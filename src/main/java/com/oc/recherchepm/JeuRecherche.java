@@ -32,7 +32,7 @@ public class JeuRecherche extends Jeu {
 		if (resultat) {
 			System.out.println("\nVous avez trouvé la bonne combinaison ! Félicitations !");
 		}else {
-			System.out.println("\nVous avez atteint le nombre max de tentative ! désolé !\n");
+			System.out.println("\nVous avez atteint le nombre max de tentative sans trouver la bonne combinaison! désolé !\n");
 		}
 	}
 	
@@ -53,7 +53,7 @@ public class JeuRecherche extends Jeu {
 		if (!resultat) {
 			System.out.println("\nVous avez trouvé la bonne combinaison ! Félicitations !");
 		}else {
-			System.out.println("\nVous avez atteint le nombre max de tentative ! désolé !\\n");
+			System.out.println("\nVous avez atteint le nombre max de tentative sans trouver la bonne combinaison! désolé !\\n");
 		}
 		
 	}
@@ -95,7 +95,7 @@ public class JeuRecherche extends Jeu {
 		}else if (!resultatAiJuste && resultatUtilJuste) {
 			System.out.println("Vous avez gagné !");
 		}else {
-			System.out.println("Vous et l'IA avez atteint le nombre max de tentatives ! Personne en gagne !");
+			System.out.println("Vous et l'IA avez atteint le nombre max de tentatives sans que personne ne trouve la bonne combinaison! Personne en gagne !");
 		}
 	}
 	
