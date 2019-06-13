@@ -20,17 +20,18 @@ public abstract class Menu implements IMenu {
 	 * @return int entier saisie au clavier
 	 */
 	public int lireChoixMenu(int nombreItem) {
-		boolean saisieCorrecte=true;
+		boolean saisieCorrecte=false;
 		int choixMenu;
-			do {
-				choixMenu = saisie.nextInt();
-				if (choixMenu > nombreItem && choixMenu<1) {
-					System.out.println("choix incorrect : vous devez saisir un nombre compris entre 1 et "+nombreItem);
-					saisieCorrecte=false;
-				}else{
-					saisieCorrecte=true;
-				}
-			} while(!saisieCorrecte);
+		do {
+			choixMenu = saisie.nextInt();
+			if (choixMenu<1 || choixMenu > nombreItem) {
+				System.out.println("choix incorrect ! ");
+				System.out.println("Veuillez saisir un nombre entre 1 et "+nombreItem+" pour indiquer votre choix");
+				saisieCorrecte=false;
+			}else{
+				saisieCorrecte=true;
+			}
+		} while(!saisieCorrecte);
 		return choixMenu;
 	}
 }
