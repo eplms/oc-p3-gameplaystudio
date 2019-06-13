@@ -6,7 +6,7 @@ import com.oc.common.Combinaison;
 
 public class CombinaisonRecherche extends Combinaison{
 	public CombinaisonRecherche(int taille) {
-		super(taille);
+		super (taille);
 	}
 
 	Scanner saisieComp = new Scanner (System.in);
@@ -46,17 +46,27 @@ public class CombinaisonRecherche extends Combinaison{
 	    	for (int i=0;i<=(taille-1);i++) {
 	    		prochaineCombinaison[i] = 5;
 	    		}
-	    	}else {
+	    } else if (nbTentative==1){
 	    	for (int i=0;i<=(taille-1);i++) {
 	    		if(resultatComparaison[i].equals("=")) {
 	    			prochaineCombinaison[i]=combinaison1[i];
 	    		} else if (resultatComparaison[i].equals("+")) {
-	    			prochaineCombinaison[i]=combinaison1[i]+1;
+	    			prochaineCombinaison[i]= combinaison1[i]+2;
+	    		} else {
+	    			prochaineCombinaison[i]=combinaison1[i]-2;
+	    		}
+	    	}
+	    }else {
+	    	for (int i=0;i<=(taille-1);i++) {
+	    		if(resultatComparaison[i].equals("=")) {
+	    			prochaineCombinaison[i]=combinaison1[i];
+	    		} else if (resultatComparaison[i].equals("+")) {
+	    			prochaineCombinaison[i]= combinaison1[i]+1;
 	    		} else {
 	    			prochaineCombinaison[i]=combinaison1[i]-1;
 	    		}
 	    	}
-	    }
+	    }	
 	    return prochaineCombinaison;
 	}
 	
@@ -112,10 +122,12 @@ public class CombinaisonRecherche extends Combinaison{
 	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
 	 */
 	public void afficherResultatComparaison(String resultatComparaison[]) {
-		System.out.println("Résultat :");
+		System.out.print("Résultat : ");
 		for (int i=0;i<=taille-1;i++) {
 			System.out.print(resultatComparaison[i]);
 		}
+		System.out.println();
+
 	}
 
 	public int getTaille() {
@@ -125,6 +137,7 @@ public class CombinaisonRecherche extends Combinaison{
 	public void setTaille(int taille) {
 		this.taille = taille;
 	}
+
 }
 	
 

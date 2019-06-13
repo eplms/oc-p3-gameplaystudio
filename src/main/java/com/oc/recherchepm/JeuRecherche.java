@@ -6,6 +6,7 @@ public class JeuRecherche extends Jeu {
 	
 	
 	public void lancerJeu(int choixMode) {
+		
 		initialiserParametresJeu();
 		switch (choixMode){
 			case 1: jouerChallenger();
@@ -23,6 +24,11 @@ public class JeuRecherche extends Jeu {
 		boolean resultat=false;
 		int combinaisonSecrete[]=combinaison1.genererCombinaisonAleatoire();
 		do {
+			if(isModeDeveloppeur()) {
+				System.out.print("\n(Combinaison secrète :");
+				combinaison1.afficherCombinaison(combinaisonSecrete);
+				System.out.println(")");
+			}
 			int proposition []= combinaison2.lireCombinaison(getTaille());
 			String comparaison []=combinaison2.comparerCombinaison(combinaisonSecrete, proposition);
 			combinaison2.afficherResultatComparaison(comparaison);
@@ -51,9 +57,9 @@ public class JeuRecherche extends Jeu {
 			nbTry=nbTry+1;
 		}while (!resultat && nbTry<getNombreEssai());
 		if (!resultat) {
-			System.out.println("\nVous avez trouvé la bonne combinaison ! Félicitations !");
+			System.out.println("\nL'AI a atteint le nombre max de tentative sans trouver la bonne combinaison! Félicitations !");
 		}else {
-			System.out.println("\nVous avez atteint le nombre max de tentative sans trouver la bonne combinaison! désolé !\\n");
+			System.out.println("\nL'AI a trouvé la bonne combinaison! Désolé !");
 		}
 		
 	}
@@ -75,6 +81,11 @@ public class JeuRecherche extends Jeu {
 		
 		do {
 			// partie mode challenger 
+			if(isModeDeveloppeur()) {
+				System.out.print("\n(Combinaison secrète :");
+				combinaison1.afficherCombinaison(combinaisonSecreteAi);
+				System.out.println(")");
+			}
 			int propositionUtilisateur[]=combinaison2.lireCombinaison(getTaille());
 			String resultatComparaisonAi[]=combinaison2.comparerCombinaison(combinaisonSecreteAi, propositionUtilisateur);
 			combinaison2.afficherResultatComparaison(resultatComparaisonAi);
@@ -82,6 +93,7 @@ public class JeuRecherche extends Jeu {
 			
 			//partie mode defenseur
 			propositionAi=combinaison3.genererProchaineCombinaison(nbTry, propositionAi, resultatComparaisonUtil);
+			System.out.print("\nla proposition de l'AI est :");
 			combinaison3.afficherCombinaison(propositionAi);
 			resultatComparaisonUtil=combinaison3.lireResultatComparaison();
 			resultatAiJuste=combinaison3.estJuste(resultatComparaisonUtil);
@@ -93,9 +105,9 @@ public class JeuRecherche extends Jeu {
 		}else if(resultatAiJuste && !resultatUtilJuste) {
 			System.out.println(" L'IA a trouvé la bonne combinaison avant vous : Vous avez perdu ! Désolé");
 		}else if (!resultatAiJuste && resultatUtilJuste) {
-			System.out.println("Vous avez gagné !");
+			System.out.println("Vous avez trouvé la bonne combinaison avant l'IA ! félicitations !");
 		}else {
-			System.out.println("Vous et l'IA avez atteint le nombre max de tentatives sans que personne ne trouve la bonne combinaison! Personne en gagne !");
+			System.out.println("Vous et l'IA avez atteint le nombre max de tentatives sans que personne ne trouve la bonne combinaison! Personne ne gagne !\n");
 		}
 	}
 	

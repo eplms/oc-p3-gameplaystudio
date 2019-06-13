@@ -66,7 +66,7 @@ public class Lanceur{
 	 */
 	
 	private int lancerMenuFin() {
-		String jeuxFin="Que souhaitez-vous faire? \n"+"1- Rejouer à l'identique ?\n"+"2- Changer de jeu et/ou de mode\n"+"3- quitter\n";
+		String jeuxFin="\nQue souhaitez-vous faire? \n"+"1- Rejouer à l'identique ?\n"+"2- Changer de jeu et/ou de mode ?\n"+"3- quitter ?\n";
 		int nombreItemFin=3;
 		int choixFin;
 		ContenuMenu menuFin = new ContenuMenu();

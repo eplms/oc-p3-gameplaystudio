@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public abstract class Combinaison implements ICombinaison{
 	protected int taille;
-	protected int combinaison[];
+	protected int combinaison[][];
 	protected int historique;
 	Scanner saisieCombi = new Scanner (System.in);
 
@@ -16,6 +16,7 @@ public abstract class Combinaison implements ICombinaison{
 		this.taille=taille;
 	}
 	
+
 	public int[] genererCombinaisonAleatoire() {
 		int i;
 		double digit;
@@ -34,7 +35,7 @@ public abstract class Combinaison implements ICombinaison{
 	 * @param combinaison tableau contenant la combinaison à afficher
 	 */
 	public void afficherCombinaison(int combinaison[]) {
-		System.out.println("\nProposition de l'AI");
+		//System.out.println("\nProposition de l'AI");
 		for (int i=0; i<=(taille-1); i++) {
 			System.out.print(+combinaison[i]);
 		}
