@@ -31,6 +31,8 @@ public abstract class Menu implements IMenu {
 			}else{
 				saisieCorrecte=true;
 			}
+			// vidage du buffer
+			saisie.nextLine();
 		} while(!saisieCorrecte);
 		return choixMenu;
 	}

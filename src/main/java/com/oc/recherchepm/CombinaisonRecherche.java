@@ -5,14 +5,12 @@ import java.util.Scanner;
 import com.oc.common.Combinaison;
 
 public class CombinaisonRecherche extends Combinaison{
+	Scanner saisieComp=new Scanner (System.in);
+	
 	public CombinaisonRecherche(int taille) {
 		super (taille);
 	}
-
-	Scanner saisieComp = new Scanner (System.in);
-
-
-
+	
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison digit par digit
@@ -96,27 +94,43 @@ public class CombinaisonRecherche extends Combinaison{
 	 * @return resultat de la comparaison saisie
 	 */
 	public String[] lireResultatComparaison() {
+		char []resultatComp=new char[taille];
 		String []resultatComparaison=new String[taille];
-		System.out.println("\n-> votre réponse : ");
-		// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
-		String saisieComparaison = saisieComp.nextLine();
-		//saisie.close();
-		// test de la taille de la chaine de caractère saisie		
-		if (saisieComparaison.length()!=taille) {
-			throw new IllegalArgumentException("Vous devez saisir "+taille+" signes =,+ ou -");
-		}
-		/* découpage de la chaine en caractère et mise dans un tableau */
-		for (int i=0; i<saisieComparaison.length();i++) {
-			/* ajout de chaine de caractère vide conversion implicite en chaine de caratère*/
-			resultatComparaison[i]=saisieComparaison.charAt(i)+"";
-			//Gestion d'exception si saisie autre que = ou + ou - 
-			if (!((resultatComparaison[i].equals("="))||(resultatComparaison[i].equals("+"))||(resultatComparaison[i].equals("-")))) {
-				throw new IllegalArgumentException ("Vous devez saisir une combinaison de =, + ou - !!!");
+		String saisieComparaison;
+		boolean saisieValable=true;
+		boolean saisieLongueur=true;
+		
+		do {
+			saisieValable=true;
+			saisieLongueur=true;
+			System.out.println("\n-> votre réponse : ");			
+			saisieComparaison=saisieComp.nextLine();
+			
+			for (int i=0; i<saisieComparaison.length();i++) {
+				
+				//Decoupage du String saisi en char et transformation du char en string à un caractère avec ""
+				resultatComp=saisieComparaison.toCharArray();
+				resultatComparaison[i]=resultatComp[i]+"";
+				
+				// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
+				if (!((resultatComparaison[i].equals("="))||(resultatComparaison[i].equals("+"))||(resultatComparaison[i].equals("-")))) {
+					System.out.println("Attention ! Vous avez saisie d'autres caractères que =, + ou - !!!");
+					System.out.println("Vous devez saisir une combinaison de =, + ou - uniquement!!!");
+					saisieValable=false;
+					}
 			}
-		}
+			//validation de la longueur de la saisie
+			if (saisieComparaison.length()!=taille) {
+				System.out.println("Attention ! vous n'avez pas saisie le bon nombre de signes !");
+				System.out.println("Vous devez saisir "+taille+" signes =,+ ou -");
+				saisieLongueur=false;
+			}
+			
+		}while(!(saisieValable && saisieLongueur));
+		
+		System.out.println("Resultat :"+resultatComparaison[0]);
 		return resultatComparaison;
 	}
-
 	/**
 	 *Méthode affichant le résultat de la comparaison entre la proposition du joueur et la combinaison secrete
 	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
