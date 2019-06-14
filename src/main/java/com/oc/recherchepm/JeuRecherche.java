@@ -4,9 +4,7 @@ import com.oc.common.Jeu;
 
 public class JeuRecherche extends Jeu {
 	
-	
 	public void lancerJeu(int choixMode) {
-		
 		initialiserParametresJeu();
 		switch (choixMode){
 			case 1: jouerChallenger();

@@ -1,5 +1,6 @@
 package com.oc.common;
 
+import com.oc.mastermind.JeuMastermind;
 import com.oc.recherchepm.JeuRecherche;
 
 public class Lanceur{
@@ -87,7 +88,8 @@ public class Lanceur{
 			JeuRecherche jeu1= new JeuRecherche();
 			jeu1.lancerJeu(choixMode);
 		} else if (choixJeux==2) {
-			System.out.println("lancement du jeu Mastermind");
+			JeuMastermind jeu2=new JeuMastermind();
+			jeu2.lancerJeu(choixMode);
 		}
 	}
 }

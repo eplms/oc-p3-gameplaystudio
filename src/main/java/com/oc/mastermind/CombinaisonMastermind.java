@@ -20,20 +20,26 @@ public class CombinaisonMastermind extends Combinaison {
 		int i=0;
 		Boolean[] masqueCombinaison1 = new Boolean[taille];
 		Boolean[] masqueCombinaison2= new Boolean[taille];
+		String comparaison[]=new String[taille];
 		
-		String comparaison[] = null;
+		// Initialisation des tableaux
+		for(i=0;i<taille;i++) {
+			masqueCombinaison1[i]=false;
+			masqueCombinaison2[i]=false;
+		}
+		
 		for (i=0; i<= taille-1; i++) {
 			if (combinaison1[i]==combinaison2[i]) {
 				nombreBienPlaces=nombreBienPlaces+1;
 				masqueCombinaison1[i]= true;
-				masqueCombinaison2[i]=true;
+				masqueCombinaison2[i]= true;
 			}
 		}
 		int j=0;
 		int k=0;
-		for (j=0; j<=taille-1;i++) {
-			for(k=0;k<=taille-1;k++) {
-				if((j!=k) && masqueCombinaison1[j]==false && masqueCombinaison2[k]==false){
+		for (j=0; j<taille;j++) {
+			for(k=0;k<taille;k++) {
+				if((j!=k) && (masqueCombinaison1[j]==false) && (masqueCombinaison2[k]==false)){
 					if(combinaison1[j]==combinaison2[k]){
 						nombrePresents=nombrePresents+1;
 						masqueCombinaison1[j]=true;
@@ -42,8 +48,10 @@ public class CombinaisonMastermind extends Combinaison {
 				}
 			}
 		}
-		comparaison[0]=String.valueOf(nombreBienPlaces);
-		comparaison[1]=String.valueOf(nombrePresents);
+		comparaison[0]=Integer.toString(nombreBienPlaces);
+		comparaison[1]=Integer.toString(nombrePresents);
+		//comparaison[0]=String.valueOf(nombreBienPlaces);
+		//comparaison[1]=String.valueOf(nombrePresents);
 		return comparaison;
 	}
 	
@@ -73,13 +81,17 @@ public class CombinaisonMastermind extends Combinaison {
 		if (nbTentative==0) {
 			prochaineCombinaison= genererCombinaisonAleatoire();
 		}
-		
 		return prochaineCombinaison;
 	}
 	
 	
 	public boolean estJuste (String resultatComparaison[]) {
 		boolean resultat=false;
+		if (Integer.parseInt(resultatComparaison[0])==taille) {
+			resultat=true;
+		}else {
+			resultat=false;
+		}
 		return resultat;
 		
 	}
