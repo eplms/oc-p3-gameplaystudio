@@ -112,3 +112,6 @@ DEBUG | 2019-06-18 09:53:39 | [main] main.Main (Main.java:32) - Le mode dévelop
 DEBUG | 2019-06-18 10:21:37 | [main] main.Main (Main.java:19) - Le nombre max d'essais est de 10 essais
 DEBUG | 2019-06-18 10:21:37 | [main] main.Main (Main.java:25) - La combinaison à trouver comporte 4 chiffres
 DEBUG | 2019-06-18 10:21:37 | [main] main.Main (Main.java:32) - Le mode développeur est activé
+DEBUG | 2019-06-18 11:00:34 | [main] main.Main (Main.java:19) - Le nombre max d'essais est de 10 essais
+DEBUG | 2019-06-18 11:00:34 | [main] main.Main (Main.java:25) - La combinaison à trouver comporte 4 chiffres
+DEBUG | 2019-06-18 11:00:34 | [main] main.Main (Main.java:32) - Le mode développeur est activé

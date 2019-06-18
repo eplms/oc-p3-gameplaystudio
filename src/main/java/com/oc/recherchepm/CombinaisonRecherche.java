@@ -51,7 +51,7 @@ public class CombinaisonRecherche extends Combinaison{
 	    		} else if (resultatComparaison[i].equals("+")) {
 	    			prochaineCombinaison[i]= combinaison1[i]+2;
 	    		} else {
-	    			prochaineCombinaison[i]=combinaison1[i]-2;
+	    			prochaineCombinaison[i]=combinaison1[i]-3;
 	    		}
 	    	}
 	    }else {
