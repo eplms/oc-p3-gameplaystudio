@@ -2,6 +2,7 @@ package com.oc.common;
 
 import com.oc.mastermind.JeuMastermind;
 import com.oc.recherchepm.JeuRecherche;
+import com.oc.utilitaire.GestionConfiguration;
 
 public class Lanceur{
 
@@ -34,12 +35,18 @@ public class Lanceur{
 	
 	private int lancerMenuJeu() {
 		String jeuxDebut="Bienvenue \n\n"+"A quel jeu voulez-vous jouer ?\n\n"+"1- Recherche+/- \n"+"2- Mastermind \n"+"3- quitter";
+		Boolean modeDeveloppeurActif=verifierModeDeveloppeur();
 		int nombreItemJeu=3;
 		int choixJeux;
 		ContenuMenu menuJeux = new ContenuMenu();
 		menuJeux.setNombreItem(nombreItemJeu);
 		menuJeux.setTexteMenu(jeuxDebut);
 		menuJeux.afficherMenu(menuJeux.getTexteMenu());
+		if (modeDeveloppeurActif) {
+			System.out.println("\nRappel : le mode développeur est activé !");
+		} else {
+			System.out.println("\n (Le mode développeur n'est pas activé)");
+		}
 		choixJeux= menuJeux.lireChoixMenu(menuJeux.getNombreItem());
 		return choixJeux;
 	}
@@ -92,6 +99,10 @@ public class Lanceur{
 			jeu2.lancerJeu(choixMode);
 		}
 	}
+	private boolean verifierModeDeveloppeur() {
+		boolean modeDev=GestionConfiguration.lireModeDeveloppeur();
+		return modeDev;
+		}
 }
 
 	

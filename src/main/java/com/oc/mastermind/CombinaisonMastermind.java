@@ -76,15 +76,28 @@ public class CombinaisonMastermind extends Combinaison {
 		}
 	}
 	
-	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
+	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[][], String resultatComparaison[][]) {
 		int prochaineCombinaison[] = null;
+		boolean estAdmissible=false;
 		if (nbTentative==0) {
 			prochaineCombinaison= genererCombinaisonAleatoire();
+		}else {
+			do {
+				prochaineCombinaison=genererCombinaisonAleatoire();
+				for (int i=0; i<nbTentative;i++) {
+					for (int j=0; j< taille;j++ ) {
+						
+					}
+				}
+				
+			}while(!estAdmissible);
 		}
 		return prochaineCombinaison;
 	}
 	
-	
+	/**
+	 * 
+	 */
 	public boolean estJuste (String resultatComparaison[]) {
 		boolean resultat=false;
 		if (Integer.parseInt(resultatComparaison[0])==taille) {
@@ -93,7 +106,6 @@ public class CombinaisonMastermind extends Combinaison {
 			resultat=false;
 		}
 		return resultat;
-		
 	}
 	
 	

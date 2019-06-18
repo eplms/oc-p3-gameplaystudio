@@ -14,7 +14,6 @@ public abstract class Jeu implements IJeu{
 		setNombreEssai(lireNombreEssai());
 		// initialisation du mode développeur à partir du fichier de configuration
 		setModeDeveloppeur(lireModeDeveloppeur());
-		
 	}		
 	
 	private int lireNombreEssai() {

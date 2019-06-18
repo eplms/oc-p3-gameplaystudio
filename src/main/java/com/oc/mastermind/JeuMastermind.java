@@ -1,9 +1,13 @@
 package com.oc.mastermind;
 
 import com.oc.common.Jeu;
+import com.oc.recherchepm.CombinaisonRecherche;
 
 public class JeuMastermind extends Jeu{
 
+	/**
+	 * 
+	 */
 	public void lancerJeu(int choixMode) {
 		initialiserParametresJeu();
 		switch (choixMode){
@@ -15,6 +19,9 @@ public class JeuMastermind extends Jeu{
 			}	
 	}
 	
+	/**
+	 * 
+	 */
 	private void jouerChallenger () {
 		CombinaisonMastermind combinaison1 = new CombinaisonMastermind(getTaille());
 		CombinaisonMastermind combinaison2 = new CombinaisonMastermind(getTaille());
@@ -42,7 +49,26 @@ public class JeuMastermind extends Jeu{
 	
 	
 	private void jouerDefenseur() {
-		
+		int historiqueProposition[][] =new int[getTaille()][getNombreEssai()];
+		int historiqueResultatComparaison[][] =new int[getTaille()][getNombreEssai()];
+		int nbTry=0;
+		boolean resultat=false;
+		CombinaisonMastermind combinaison1= new CombinaisonMastermind(getTaille());
+		CombinaisonMastermind historiqueComparaisonProposition= new CombinaisonMastermind(getTaille());
+		String resultatComparaison[]=new String[getTaille()];
+		do {
+			historiqueProposition[nbTry][getTaille()-1]=combinaison1.genererProchaineCombinaison(nbTry, historiqueProposition[nbTry][getTaille()-1], historiqueResultatComparaison[nbTry][getTaille()-1]);
+			combinaison1.afficherCombinaison(historiqueProposition[nbTry][getTaille()-1]);
+			historiqueResultatComparaison[nbTry][getTaille()-1]=combinaison1.lireResultatComparaison();
+			resultatComp=historiqueResultatComparaison[nbTry][getTaille()-1];
+			resultat=combinaison1.estJuste(historiqueResultatComparaison[nbTry][getTaille()-1]);
+			nbTry=nbTry+1;
+		}while (!resultat && nbTry<getNombreEssai());
+		if (!resultat) {
+			System.out.println("\nL'AI a atteint le nombre max de tentative sans trouver la bonne combinaison! Félicitations !");
+		}else {
+			System.out.println("\nL'AI a trouvé la bonne combinaison! Désolé !");
+		}
 		
 	}
 
