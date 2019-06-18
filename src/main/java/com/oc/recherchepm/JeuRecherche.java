@@ -49,6 +49,7 @@ public class JeuRecherche extends Jeu {
 		String resultatComparaison[]=new String[getTaille()];
 		do {
 			proposition=combinaison1.genererProchaineCombinaison(nbTry, proposition, resultatComparaison);
+			System.out.print("\nLa proposition "+(nbTry+1)+" de l'AI est : ");
 			combinaison1.afficherCombinaison(proposition);
 			resultatComparaison=combinaison1.lireResultatComparaison();
 			resultat=combinaison1.estJuste(resultatComparaison);
@@ -91,7 +92,7 @@ public class JeuRecherche extends Jeu {
 			
 			//partie mode defenseur
 			propositionAi=combinaison3.genererProchaineCombinaison(nbTry, propositionAi, resultatComparaisonUtil);
-			System.out.print("\nla proposition de l'AI est :");
+			System.out.print("\nla proposition "+(nbTry+1)+" de l'AI est :");
 			combinaison3.afficherCombinaison(propositionAi);
 			resultatComparaisonUtil=combinaison3.lireResultatComparaison();
 			resultatAiJuste=combinaison3.estJuste(resultatComparaisonUtil);

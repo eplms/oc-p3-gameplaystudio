@@ -127,8 +127,6 @@ public class CombinaisonRecherche extends Combinaison{
 			}
 			
 		}while(!(saisieValable && saisieLongueur));
-		
-		System.out.println("Resultat :"+resultatComparaison[0]);
 		return resultatComparaison;
 	}
 	/**
