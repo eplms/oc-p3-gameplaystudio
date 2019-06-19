@@ -1,10 +1,15 @@
 package com.oc.common;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.oc.main.MainLog;
 import com.oc.mastermind.JeuMastermind;
 import com.oc.recherchepm.JeuRecherche;
 import com.oc.utilitaire.GestionConfiguration;
 
 public class Lanceur{
+	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
 	/**
 	 * Méthode de gestion du lancement des menus et de lecture des choix utilisateurs 
@@ -17,10 +22,14 @@ public class Lanceur{
 		int choixFin;
 		do {
 			choixJeux=lancerMenuJeu();
+			LOG.debug(" choix de jeu : "+choixJeux);
+
 			choixMode=lancerMenuMode();
+			LOG.debug(" choix de Mode : "+choixMode);
 			do {
 				lancerJeu(choixJeux,choixMode);
 				choixFin=lancerMenuFin();
+				LOG.debug(" choix de fin : "+choixFin);
 			}while (choixFin==1);
 			if(choixFin==3) {
 				finDuJeu=true;

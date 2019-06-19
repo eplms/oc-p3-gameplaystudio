@@ -2,11 +2,16 @@ package com.oc.recherchepm;
 
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.oc.common.Combinaison;
+import com.oc.main.MainLog;
 
 public class CombinaisonRecherche extends Combinaison{
 	Scanner saisieComp=new Scanner (System.in);
-	
+	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+
 	public CombinaisonRecherche(int taille) {
 		super (taille);
 	}
@@ -97,35 +102,35 @@ public class CombinaisonRecherche extends Combinaison{
 		char []resultatComp=new char[taille];
 		String []resultatComparaison=new String[taille];
 		String saisieComparaison;
-		boolean saisieValable=true;
-		boolean saisieLongueur=true;
+		boolean saisieValable;
+		boolean saisieLongueur;
 		
 		do {
 			saisieValable=true;
 			saisieLongueur=true;
 			System.out.println("\n-> votre réponse : ");			
 			saisieComparaison=saisieComp.nextLine();
-			
+			// Découpage du String saisi en tableau de char
+			resultatComp=saisieComparaison.toCharArray();
 			for (int i=0; i<saisieComparaison.length();i++) {
-				
-				//Decoupage du String saisi en char et transformation du char en string à un caractère avec ""
-				resultatComp=saisieComparaison.toCharArray();
+				//Transformation du char en string à un caractère avec ""
 				resultatComparaison[i]=resultatComp[i]+"";
-				
-				// Valider la saisie de l'utilisateur a-t-il bien saisi des + - ou = uniquement en parcourant la chaine et comparer les caractères
-				if (!((resultatComparaison[i].equals("="))||(resultatComparaison[i].equals("+"))||(resultatComparaison[i].equals("-")))) {
-					System.out.println("Attention ! Vous avez saisie d'autres caractères que =, + ou - !!!");
-					System.out.println("Vous devez saisir une combinaison de =, + ou - uniquement!!!");
+				if (!((resultatComparaison[i].equals("="))||(resultatComparaison[i].equals("+"))||(resultatComparaison[i].equals("-")))) { 
 					saisieValable=false;
-					}
+					LOG.warn(" Saisie d'un mauvais caractère : "+resultatComparaison[i]);
+				}
 			}
+			if(!saisieValable) {
+                System.out.println("Attention ! Vous avez saisie d'autres caractères que =, + ou - !!!");
+                System.out.println("Vous devez saisir une combinaison de =, + ou - uniquement!!!");
+            }
 			//validation de la longueur de la saisie
 			if (saisieComparaison.length()!=taille) {
 				System.out.println("Attention ! vous n'avez pas saisie le bon nombre de signes !");
 				System.out.println("Vous devez saisir "+taille+" signes =,+ ou -");
+				LOG.warn(" Mauvaise réponse saisie : "+saisieComparaison.length()+"caractères saisis. au lieu de "+taille);
 				saisieLongueur=false;
 			}
-			
 		}while(!(saisieValable && saisieLongueur));
 		return resultatComparaison;
 	}

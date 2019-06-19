@@ -2,9 +2,15 @@ package com.oc.common;
 
 import java.util.Scanner;
 
-public abstract class Menu implements IMenu {	
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
+import com.oc.main.MainLog;
+
+
+public abstract class Menu implements IMenu {	
 	Scanner saisie=new Scanner(System.in);
+	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
 	/**
 	 * Méthode d'affichage d'un menu
@@ -25,6 +31,7 @@ public abstract class Menu implements IMenu {
 		do {
 			choixMenu = saisie.nextInt();
 			if (choixMenu<1 || choixMenu > nombreItem) {
+				LOG.warn(" Mauvais choix de Menu : "+choixMenu);
 				System.out.println("choix incorrect ! ");
 				System.out.println("Veuillez saisir un nombre entre 1 et "+nombreItem+" pour indiquer votre choix");
 				saisieCorrecte=false;

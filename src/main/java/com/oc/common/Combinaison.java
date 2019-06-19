@@ -3,11 +3,17 @@ package com.oc.common;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.oc.main.MainLog;
+
 public abstract class Combinaison implements ICombinaison{
 	protected int taille;
 	protected int combinaison[][];
 	protected int historique;
 	Scanner saisieCombi = new Scanner (System.in);
+	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
 	/** Méthode de génération aléatoire de combinaisons
 	 * @return tableau d'entier constituant la combinaison	
@@ -65,6 +71,8 @@ public abstract class Combinaison implements ICombinaison{
 					System.out.println("");
 					System.out.println("Attention !! vous avez saisi une combinaison de "+digit+" chiffres");
 					System.out.println("vous devez entrer une combinaison de "+taille+" chiffres");
+					LOG.warn("Mauvaise proposition saisie : "+digit+" chiffres saisies au lieu de "+taille);
+
 				} else {
 					// Affectation de chaque digit à une case du tableau
 					for (int i=0; i<(taille);i++) {
@@ -76,6 +84,8 @@ public abstract class Combinaison implements ICombinaison{
 			catch(InputMismatchException e) {
 				// gestion de l'exception en cas de saisie autre que d'entiers
 				System.out.println("Attention ! il ne faut saisir que des chiffres !");
+				LOG.warn(" Mauvaise proposition saisie : proposition ne contenant pas que des chiffres ");
+
 				//vider le buffer
 				saisieCombi.nextLine();
 			}			
