@@ -1,19 +1,33 @@
 package com.oc.common;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import com.oc.main.MainLog;
 import com.oc.utilitaire.GestionConfiguration;
 
 public abstract class Jeu implements IJeu{
 	private int taille;
 	private int nombreEssai;
 	private boolean modeDeveloppeur;
-		
+	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+
+	
 	public void initialiserParametresJeu() {		
 		// initialisation de la taille de la combinaison à partir du fichier de configuration
 		setTaille(lireTailleCombinaison());
+		LOG.debug("taille combinaison :"+lireTailleCombinaison());
 		// initialisation du nombre d'essai max autorisé à partir du fichier de configuration
 		setNombreEssai(lireNombreEssai());
+		LOG.debug("nombre essai : "+lireNombreEssai());
 		// initialisation du mode développeur à partir du fichier de configuration
 		setModeDeveloppeur(lireModeDeveloppeur());
+		if(lireModeDeveloppeur()){
+			LOG.debug("Mode développeur activé");
+		}else {
+			LOG.debug("Mode développeur désactivé");
+		}
+
 	}		
 	
 	private int lireNombreEssai() {
