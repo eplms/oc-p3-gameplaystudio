@@ -1,5 +1,6 @@
 package com.oc.common;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import org.apache.logging.log4j.LogManager;
@@ -27,20 +28,29 @@ public abstract class Menu implements IMenu {
 	 */
 	public int lireChoixMenu(int nombreItem) {
 		boolean saisieCorrecte=false;
-		int choixMenu;
-		do {
-			choixMenu = saisie.nextInt();
-			if (choixMenu<1 || choixMenu > nombreItem) {
-				LOG.warn(" Mauvais choix de Menu : "+choixMenu);
-				System.out.println("choix incorrect ! ");
+		int choixMenu = 0;
+		while(!saisieCorrecte) {
+			try {
+				choixMenu = saisie.nextInt();
+				if (choixMenu<1 || choixMenu > nombreItem) {
+					LOG.warn(" Mauvais choix de Menu : "+choixMenu);
+					System.out.println("choix incorrect ! ");
+					System.out.println("Veuillez saisir un nombre entre 1 et "+nombreItem+" pour indiquer votre choix");
+					saisieCorrecte=false;
+				}else{
+					saisieCorrecte=true;
+				}
+				// vidage du buffer
+				saisie.nextLine();
+			}catch(InputMismatchException e) {
+				LOG.warn(" Mauvais choix de Menu. Saisie d'un signe différent d'un entier");
+				System.out.println(("Attention ! Vous n'avez pas saisie un nombre !"));
+				System.out.println("Vous devez impérativement saisir un nombre entier !");
 				System.out.println("Veuillez saisir un nombre entre 1 et "+nombreItem+" pour indiquer votre choix");
 				saisieCorrecte=false;
-			}else{
-				saisieCorrecte=true;
+				saisie.nextLine();
 			}
-			// vidage du buffer
-			saisie.nextLine();
-		} while(!saisieCorrecte);
+		}
 		return choixMenu;
 	}
 }

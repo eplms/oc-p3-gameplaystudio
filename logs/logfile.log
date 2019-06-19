@@ -262,3 +262,20 @@ WARN  | 2019-06-19 10:52:22 | [main] recherchepm.CombinaisonRecherche (Combinais
 WARN  | 2019-06-19 10:52:22 | [main] recherchepm.CombinaisonRecherche (CombinaisonRecherche.java:120) -  Mauvaise caractère : l
 WARN  | 2019-06-19 10:52:22 | [main] recherchepm.CombinaisonRecherche (CombinaisonRecherche.java:120) -  Mauvaise caractère : m
 WARN  | 2019-06-19 10:52:32 | [main] recherchepm.CombinaisonRecherche (CombinaisonRecherche.java:120) -  Mauvaise caractère : m
+DEBUG | 2019-06-19 11:20:52 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-19 11:21:20 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-19 11:21:37 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 1
+DEBUG | 2019-06-19 11:21:56 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 4
+DEBUG | 2019-06-19 11:22:01 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 3
+DEBUG | 2019-06-19 11:22:08 | [main] main.Main (Main.java:12) - Lancement du jeu
+WARN  | 2019-06-19 11:22:16 | [main] common.Menu (Menu.java:36) -  Mauvais choix de Menu : 4
+DEBUG | 2019-06-19 11:22:54 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-19 11:23:42 | [main] main.Main (Main.java:12) - Lancement du jeu
+WARN  | 2019-06-19 11:23:45 | [main] common.Menu (Menu.java:46) -  Mauvais choix de Menu. Saisie de : 0
+WARN  | 2019-06-19 11:23:48 | [main] common.Menu (Menu.java:46) -  Mauvais choix de Menu. Saisie de : 0
+DEBUG | 2019-06-19 11:23:50 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 1
+DEBUG | 2019-06-19 11:25:31 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-19 11:25:36 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 1
+WARN  | 2019-06-19 11:26:00 | [main] common.Menu (Menu.java:46) -  Mauvais choix de Menu. Saisie d'un signe différent d'un entier
+DEBUG | 2019-06-19 11:26:03 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 1
+DEBUG | 2019-06-19 11:26:08 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 3
