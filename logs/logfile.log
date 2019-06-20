@@ -797,3 +797,243 @@ DEBUG | 2019-06-20 14:34:25 | [main] common.Lanceur (Lanceur.java:32) -  choix d
 DEBUG | 2019-06-20 14:34:26 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
 DEBUG | 2019-06-20 14:34:26 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
 DEBUG | 2019-06-20 14:34:26 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 14:39:02 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 14:39:04 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 14:39:05 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 14:39:05 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 14:39:05 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 14:39:05 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:02:10 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:02:15 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:02:15 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:02:15 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:02:15 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:02:15 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:02:22 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:04:30 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:04:32 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:04:32 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:04:32 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:04:32 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:04:32 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:04:36 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:05:26 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:05:27 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:05:28 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:05:28 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:05:28 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:05:28 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:05:34 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:06:07 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:06:08 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:06:09 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:06:09 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:06:09 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:06:09 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:06:11 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+WARN  | 2019-06-20 15:06:21 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:06:54 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:06:57 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:06:58 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:06:58 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:06:58 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:06:58 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:07:00 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:08:13 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:08:17 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:08:18 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:08:18 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:08:18 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:08:18 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:08:23 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:09:46 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:09:48 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:09:49 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:09:49 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:09:49 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:09:49 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:10:07 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:10:11 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:10:12 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:10:12 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:10:12 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:10:12 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:11:10 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:11:12 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:11:13 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:11:13 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:11:13 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:11:13 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:11:51 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 0
+WARN  | 2019-06-20 15:12:02 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 0
+DEBUG | 2019-06-20 15:12:40 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:12:43 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:12:44 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:12:44 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:12:44 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:12:44 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:13:10 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 2
+DEBUG | 2019-06-20 15:13:14 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:13:15 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:13:15 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:13:15 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:13:15 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:13:23 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 5
+DEBUG | 2019-06-20 15:13:43 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 1
+DEBUG | 2019-06-20 15:13:43 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:13:43 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:13:43 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:13:57 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 5
+DEBUG | 2019-06-20 15:14:22 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:14:24 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:14:25 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:14:25 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:14:25 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:14:25 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:14:33 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 1
+DEBUG | 2019-06-20 15:14:33 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:14:33 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:14:33 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:15:38 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 2
+DEBUG | 2019-06-20 15:15:44 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:15:45 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:15:45 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:15:45 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:15:45 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:15:50 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:17:03 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:17:07 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:17:08 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:17:08 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:17:08 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:17:08 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:17:13 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:18:13 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:18:14 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:18:15 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:18:15 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:18:15 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:18:15 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:18:21 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:20:08 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 2
+DEBUG | 2019-06-20 15:20:09 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:20:10 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:20:10 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:20:10 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:20:10 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:20:17 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 9
+WARN  | 2019-06-20 15:20:21 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:21:53 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:21:55 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:21:57 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:21:57 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:21:57 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:21:57 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:22:06 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 1
+DEBUG | 2019-06-20 15:22:06 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:22:06 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:22:06 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:22:07 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:168) - Mauvaise saisie du nombre de digit bien positionnés 9
+WARN  | 2019-06-20 15:22:14 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:182) - Mauvaise saisie du nombre de digit bien positionnés 9
+DEBUG | 2019-06-20 15:22:26 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 1
+DEBUG | 2019-06-20 15:22:26 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:22:26 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:22:26 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:37:46 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:37:48 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:37:49 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:37:49 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:37:49 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:37:49 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:37:51 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:38:03 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 2
+DEBUG | 2019-06-20 15:38:05 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 1
+DEBUG | 2019-06-20 15:38:05 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 1
+DEBUG | 2019-06-20 15:38:06 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:38:06 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:38:06 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:38:10 | [main] common.Combinaison (Combinaison.java:74) - Mauvaise proposition saisie : 5 chiffres saisies au lieu de 4
+DEBUG | 2019-06-20 15:38:14 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 2
+DEBUG | 2019-06-20 15:38:16 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:38:16 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:38:16 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:38:16 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:38:16 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:38:22 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:170) - Mauvaise saisie du nombre de digit bien positionnés 9
+WARN  | 2019-06-20 15:38:25 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:38:34 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 1
+DEBUG | 2019-06-20 15:38:34 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:38:34 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:38:34 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:38:38 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:39:14 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:39:17 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:39:18 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:39:18 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:39:18 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:39:18 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:41:16 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:41:19 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:41:19 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:41:19 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:41:19 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:41:19 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:45:45 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:45:47 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:45:48 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:45:48 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:45:48 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:45:48 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:45:53 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:205) - Mauvaise saisie du nombre de digits présent : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:46:04 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 1
+DEBUG | 2019-06-20 15:46:04 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:46:04 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:46:04 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:46:08 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:205) - Mauvaise saisie du nombre de digits présent : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:47:25 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:47:28 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:47:28 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:47:28 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:47:28 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:47:28 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:47:32 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:50:09 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:50:11 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:50:12 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:50:12 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:50:12 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:50:12 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:50:20 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+DEBUG | 2019-06-20 15:54:14 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:54:16 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:54:16 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:54:16 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:54:17 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:54:17 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:55:17 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:55:20 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:55:21 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:55:21 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:55:21 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:55:21 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:57:38 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:57:42 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:57:42 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:57:42 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:57:42 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:57:42 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:58:12 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:58:15 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:58:17 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:58:17 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:58:17 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:58:17 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-20 15:59:01 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-20 15:59:16 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 2
+DEBUG | 2019-06-20 15:59:16 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 2
+DEBUG | 2019-06-20 15:59:16 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-20 15:59:16 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-20 15:59:16 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+WARN  | 2019-06-20 15:59:29 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+WARN  | 2019-06-20 15:59:37 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre
+WARN  | 2019-06-20 15:59:48 | [main] mastermind.CombinaisonMastermind (CombinaisonMastermind.java:180) - Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre

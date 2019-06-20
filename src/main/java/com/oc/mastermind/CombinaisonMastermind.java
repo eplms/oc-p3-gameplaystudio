@@ -70,6 +70,9 @@ public class CombinaisonMastermind extends Combinaison {
 		return comparaison;
 	}
 	
+	/**
+	 * Generation d'une nouvelle combinaison en fonction des précédentes
+	 */
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int[] prochaineCombinaison = new int [taille];
 		boolean estAdmissible=true;
@@ -90,7 +93,7 @@ public class CombinaisonMastermind extends Combinaison {
 				for (int i=0; i<nbTentative; i++) {
 					// comparer prochaine combinaison à chaque combinaison de l'historique
 					comparaison=comparerCombinaison(prochaineCombinaison,historiquePropositionCombinaison[i]);
-					
+					// comparer le resultat de la comparaison avec les comparaisons des précédentes combinaisons
 					for (int j=0; j<2;j++) {
 						if (comparaison[j].equals(historiqueComparaisonCombinaison[i][j])) {
 							nbComparaison=nbComparaison+1;
@@ -112,25 +115,6 @@ public class CombinaisonMastermind extends Combinaison {
 		}
 		return prochaineCombinaison;
 	}
-		
-	/*	private boolean comparerDeuxComparaisons(int nbTentative, String comparaison1[], String comparaison2[]){
-			boolean comparaisonIdentique=false;
-			int digit=0;
-			
-			for (int i=0; i<2; i++) {
-				if(comparaison1[i].equals(comparaison2[i])){
-						digit=digit+1;	
-						}
-				if (digit==2) {
-						comparaisonIdentique=true;
-					} else {
-						comparaisonIdentique=false;
-					}
-			}
-			return comparaisonIdentique;
-		}
-			*/
-
 	/**
 	 * Méthode affichant le résultat de la combinaison
 	 * @taille : taille de la combinaison
@@ -172,13 +156,58 @@ public class CombinaisonMastermind extends Combinaison {
 	
 	public String[] lireResultatComparaison() {
 		String []resultatComparaison=new String[2];
-		System.out.println("\n-> votre réponse :");	
-		System.out.println("Nombre de digit bien placés : ");
-		resultatComparaison[0]=saisieComp.nextLine();
-		System.out.println("\nNombre de digit présents : ");
-		resultatComparaison[1]=saisieComp.nextLine();
-		//System.out.println("nb bien pl"+resultatComparaison[0]);
-		//System.out.println("nb present"+resultatComparaison[1]);
+		boolean saisieBienPlaceValable=false;
+		boolean saisiePresentValable=false;
+		while (!saisieBienPlaceValable){
+			try {
+				do {
+					System.out.println("\n-> votre réponse :");	
+					System.out.println("Nombre de digit bien placés : ");
+					resultatComparaison[0]=saisieComp.nextLine();
+					int nombreBienPlaces = Integer.parseInt(resultatComparaison[0]);
+				
+					if ((nombreBienPlaces<0) || (nombreBienPlaces>taille )) {
+						LOG.warn("Mauvaise saisie du nombre de digit bien positionnés "+ nombreBienPlaces);
+						System.out.println("Vous devez indiquer le nombre de digits bien positionnés");
+						System.out.println("Il s'agit d'un chiffre compris entre 0 et "+taille);
+						saisieBienPlaceValable=false;
+					}else {
+						saisieBienPlaceValable=true;
+					}
+				}while (!saisieBienPlaceValable);
+			
+			}catch(NumberFormatException e) {
+				LOG.warn("Mauvaise saisie du nombre de digits bien positionnés : saisie d'un signe autre qu'un chiffre");
+				System.out.println("Vous devez indiquer le nombre de digits bien positionnés");
+				System.out.println("Il s'agit d'un chiffre compris entre 0 et "+taille);
+				saisieBienPlaceValable=false;
+			}
+		}
+			
+		
+		
+		while (!saisiePresentValable) {
+			try {
+				do {
+					System.out.println("\nNombre de digit présents : ");
+					resultatComparaison[1]=saisieComp.nextLine();
+					int nombrePresent = Integer.parseInt(resultatComparaison[1]);
+					if ((nombrePresent<0) || (nombrePresent>taille )) {
+						LOG.warn("Mauvaise saisie du nombre de digit bien positionnés "+ nombrePresent);
+						System.out.println("Vous devez indiquer le nombre de digits present");
+						System.out.println("Il s'agit d'un chiffre compris entre 0 et "+taille);
+						saisiePresentValable=false;
+					}else {
+						saisiePresentValable=true;
+					}
+				}while(!saisiePresentValable);
+			}catch(NumberFormatException e) {
+				LOG.warn("Mauvaise saisie du nombre de digits présent : saisie d'un signe autre qu'un chiffre");
+				System.out.println("Vous devez indiquer le nombre de digits présents");
+				System.out.println("Il s'agit d'un chiffre compris entre 0 et "+taille);
+				saisiePresentValable=false;
+			}
+		}	
 		return resultatComparaison;
 		}
 	
