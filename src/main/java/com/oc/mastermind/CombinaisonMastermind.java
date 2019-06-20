@@ -158,6 +158,7 @@ public class CombinaisonMastermind extends Combinaison {
 		String []resultatComparaison=new String[2];
 		boolean saisieBienPlaceValable=false;
 		boolean saisiePresentValable=false;
+		
 		while (!saisieBienPlaceValable){
 			try {
 				do {
@@ -182,8 +183,7 @@ public class CombinaisonMastermind extends Combinaison {
 				System.out.println("Il s'agit d'un chiffre compris entre 0 et "+taille);
 				saisieBienPlaceValable=false;
 			}
-		}
-			
+		}	
 		
 		
 		while (!saisiePresentValable) {

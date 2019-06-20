@@ -54,7 +54,6 @@ public class JeuMastermind extends Jeu{
 		CombinaisonMastermind combinaison1= new CombinaisonMastermind(getTaille());
 		String resultatComparaison[] =new String[2];
 		do {
-			
 			proposition=combinaison1.genererProchaineCombinaison(nbTry, proposition, resultatComparaison);
 			System.out.print("\nLa proposition "+(nbTry+1)+" de l'AI est : ");
 			combinaison1.afficherCombinaison(proposition);
@@ -76,7 +75,45 @@ public class JeuMastermind extends Jeu{
 	
 	
 	private void jouerDuel() {
-		
+		int nbTry=0;
+		CombinaisonMastermind combinaison1 = new CombinaisonMastermind(getTaille());
+		CombinaisonMastermind combinaison2 = new CombinaisonMastermind(getTaille());
+		boolean resultatUtilJuste=false;
+		boolean resultatAiJuste=false;
+		int combinaisonSecreteAi[]=combinaison1.genererCombinaisonAleatoire();
+		int propositionAi[] =new int [getTaille()];
+		String resultatComparaisonUtil[] =new String[2];
+
+		do {
+			//mode challenger
+			if(isModeDeveloppeur()) {
+				System.out.print("\n(Combinaison secrète :");
+				combinaison1.afficherCombinaison(combinaisonSecreteAi);
+				System.out.println(")");
+			}
+			int propositionUtilisateur []= combinaison2.lireCombinaison(getTaille());
+			String comparaisonAI []=combinaison2.comparerCombinaison(combinaisonSecreteAi, propositionUtilisateur);
+			combinaison2.afficherResultatComparaison(comparaisonAI);
+			resultatUtilJuste=combinaison2.estJuste(comparaisonAI);
+			//mode defenseur
+			
+			propositionAi=combinaison1.genererProchaineCombinaison(nbTry, propositionAi, resultatComparaisonUtil);
+			System.out.print("\nLa proposition "+(nbTry+1)+" de l'AI est : ");
+			combinaison1.afficherCombinaison(propositionAi);
+			resultatComparaisonUtil=combinaison1.lireResultatComparaison();
+			resultatAiJuste=combinaison1.estJuste(resultatComparaisonUtil);
+			
+			nbTry=nbTry+1;
+		}while ( !resultatUtilJuste && !resultatAiJuste && nbTry<getNombreEssai());
+		if (resultatAiJuste && resultatUtilJuste) {
+			System.out.println("Egalité : l'IA et vous avez trouvé la bonne solution en même temps!");
+		}else if(resultatAiJuste && !resultatUtilJuste) {
+			System.out.println(" L'IA a trouvé la bonne combinaison avant vous : Vous avez perdu ! Désolé");
+		}else if (!resultatAiJuste && resultatUtilJuste) {
+			System.out.println("Vous avez trouvé la bonne combinaison avant l'IA ! félicitations !");
+		}else {
+			System.out.println("Vous et l'IA avez atteint le nombre max de tentatives sans que personne ne trouve la bonne combinaison! Personne ne gagne !\n");
+		}
 	}
 
 }
