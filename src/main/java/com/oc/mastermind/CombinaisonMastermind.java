@@ -1,12 +1,27 @@
 package com.oc.mastermind;
 
+import java.util.Scanner;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.oc.common.Combinaison;
+import com.oc.main.MainLog;
+import com.oc.utilitaire.GestionConfiguration;
 
 public class CombinaisonMastermind extends Combinaison {
+	Scanner saisieComp=new Scanner (System.in);
+	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+	
+	
 	public CombinaisonMastermind(int taille) {
 		super(taille);
 	}
-
+	
+	protected int historiquePropositionCombinaison [][]= new int [GestionConfiguration.lireNombreEssai()][taille];
+	protected String historiqueComparaisonCombinaison [][]= new String [GestionConfiguration.lireNombreEssai()][2];
+	
+	
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison
@@ -20,7 +35,7 @@ public class CombinaisonMastermind extends Combinaison {
 		int i=0;
 		Boolean[] masqueCombinaison1 = new Boolean[taille];
 		Boolean[] masqueCombinaison2= new Boolean[taille];
-		String comparaison[]=new String[taille];
+		String comparaison[]=new String[2];
 		
 		// Initialisation des tableaux
 		for(i=0;i<taille;i++) {
@@ -55,6 +70,67 @@ public class CombinaisonMastermind extends Combinaison {
 		return comparaison;
 	}
 	
+	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
+		int[] prochaineCombinaison = new int [taille];
+		boolean estAdmissible=true;
+		String comparaison[]=new String[2];
+		int nbComparaison=0;
+		if (nbTentative==0) {
+			prochaineCombinaison=genererCombinaisonAleatoire();
+			for (int i=0; i<taille;i++) {
+				historiquePropositionCombinaison[nbTentative][i]=prochaineCombinaison[i];
+			}			
+		} else {
+			do {
+				for (int i=0; i<2;i++) {
+					historiqueComparaisonCombinaison[nbTentative-1][i]=resultatComparaison[i];
+				}
+				prochaineCombinaison=genererCombinaisonAleatoire();
+				nbComparaison=0;
+				for (int i=0; i<nbTentative; i++) {
+					// comparer prochaine combinaison à chaque combinaison de l'historique
+					comparaison=comparerCombinaison(prochaineCombinaison,historiquePropositionCombinaison[i]);
+					
+					for (int j=0; j<2;j++) {
+						if (comparaison[j].equals(historiqueComparaisonCombinaison[i][j])) {
+							nbComparaison=nbComparaison+1;
+							}
+					}
+					
+					// comparer le résultat de la comparaison à chaque comparaison de l'historique
+				}
+				if(nbComparaison==nbTentative*2) {
+					estAdmissible=true;
+				}else {
+					estAdmissible=false;
+				}
+					
+			}while (!estAdmissible);	
+		}
+		for (int i=0; i<taille;i++) {
+			historiquePropositionCombinaison[nbTentative][i]=prochaineCombinaison[i];
+		}
+		return prochaineCombinaison;
+	}
+		
+	/*	private boolean comparerDeuxComparaisons(int nbTentative, String comparaison1[], String comparaison2[]){
+			boolean comparaisonIdentique=false;
+			int digit=0;
+			
+			for (int i=0; i<2; i++) {
+				if(comparaison1[i].equals(comparaison2[i])){
+						digit=digit+1;	
+						}
+				if (digit==2) {
+						comparaisonIdentique=true;
+					} else {
+						comparaisonIdentique=false;
+					}
+			}
+			return comparaisonIdentique;
+		}
+			*/
+
 	/**
 	 * Méthode affichant le résultat de la combinaison
 	 * @taille : taille de la combinaison
@@ -76,42 +152,33 @@ public class CombinaisonMastermind extends Combinaison {
 		}
 	}
 	
-	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[][], String resultatComparaison[][]) {
-		int prochaineCombinaison[] = null;
-		boolean estAdmissible=false;
-		if (nbTentative==0) {
-			prochaineCombinaison= genererCombinaisonAleatoire();
-		}else {
-			do {
-				prochaineCombinaison=genererCombinaisonAleatoire();
-				for (int i=0; i<nbTentative;i++) {
-					for (int j=0; j< taille;j++ ) {
-						
-					}
-				}
-				
-			}while(!estAdmissible);
-		}
-		return prochaineCombinaison;
-	}
+	
 	
 	/**
 	 * 
 	 */
 	public boolean estJuste (String resultatComparaison[]) {
 		boolean resultat=false;
-		if (Integer.parseInt(resultatComparaison[0])==taille) {
+		if ((Integer.parseInt(resultatComparaison[0]))==taille) {
 			resultat=true;
+			//System.out.println("resultat juste");
 		}else {
 			resultat=false;
+			//System.out.println("resultat fau");
 		}
 		return resultat;
 	}
 	
 	
 	public String[] lireResultatComparaison() {
-		String []resultatComparaison=new String[taille];
-
+		String []resultatComparaison=new String[2];
+		System.out.println("\n-> votre réponse :");	
+		System.out.println("Nombre de digit bien placés : ");
+		resultatComparaison[0]=saisieComp.nextLine();
+		System.out.println("\nNombre de digit présents : ");
+		resultatComparaison[1]=saisieComp.nextLine();
+		//System.out.println("nb bien pl"+resultatComparaison[0]);
+		//System.out.println("nb present"+resultatComparaison[1]);
 		return resultatComparaison;
 		}
 	

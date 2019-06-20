@@ -44,7 +44,7 @@ public abstract class Combinaison implements ICombinaison{
 	public void afficherCombinaison(int combinaison[]) {
 		//System.out.println("\nProposition de l'AI");
 		for (int i=0; i<=(taille-1); i++) {
-			System.out.print(+combinaison[i]);
+			System.out.print(combinaison[i]);
 		}
 	}
 	
