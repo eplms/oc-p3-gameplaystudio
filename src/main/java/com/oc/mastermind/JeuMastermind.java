@@ -73,7 +73,9 @@ public class JeuMastermind extends Jeu{
 	}
 
 	
-	
+	/**
+	 * 
+	 */
 	private void jouerDuel() {
 		int nbTry=0;
 		CombinaisonMastermind combinaison1 = new CombinaisonMastermind(getTaille());
