@@ -25,8 +25,8 @@ public class CombinaisonMastermind extends Combinaison {
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison
-	 * premier digit Bien placé
-	 * Deuxième digit présent
+	 * 	Premier case : Nombre de digits biens placés
+	 * 	Deuxième case: Nombre de digits présents (n'inclut pas les biens placés
 	 */
 	
 	public String[] comparerCombinaison (int combinaison1[], int combinaison2[]){
@@ -72,7 +72,17 @@ public class CombinaisonMastermind extends Combinaison {
 	
 	/**
 	 * Generation d'une nouvelle combinaison en fonction des précédentes
+	 * 
 	 */
+	
+	/**
+	 * Méthode générant une nouvelle combinaison en fonction de l'historique des propositions et des comparaisons
+	 * @param nbTentative correspond au rang de la tentative
+	 * @param combinaison1 combinaison précédente
+	 * @param resultatComparaison tableau de résultat de la comparaison précédente avec la solution
+	 * @return prochaineCombinaison nouvelle proposition de combinaison
+	 */
+	
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int[] prochaineCombinaison = new int [taille];
 		boolean estAdmissible=true;
@@ -115,9 +125,9 @@ public class CombinaisonMastermind extends Combinaison {
 		}
 		return prochaineCombinaison;
 	}
+
 	/**
 	 * Méthode affichant le résultat de la combinaison
-	 * @taille : taille de la combinaison
 	 * @comparaison : tableau contenant le résultat de la comparaison
 	 */
 	public void afficherResultatComparaison(String comparaison[]) {
@@ -139,7 +149,11 @@ public class CombinaisonMastermind extends Combinaison {
 	
 	
 	/**
-	 * 
+	 * Méthode indiquant à partir du résultat de la comparaison si la combinaison est juste (identique à la combinaison secrete)
+	 * @param resultatComparaison tableau contenant
+	 * 	première case : nombre de digits biens placés
+	 *  deuxième case : nombre de digits présents (n'inclut pas les biens placés
+	 * @return resultat : true si la combinaison est juste, false sinon.
 	 */
 	public boolean estJuste (String resultatComparaison[]) {
 		boolean resultat=false;
@@ -153,6 +167,13 @@ public class CombinaisonMastermind extends Combinaison {
 		return resultat;
 	}
 	
+	/**
+	 * Méthode permettant à l'utilisateur de saisir le resultat de la comparaison entre la
+	 * propo de l'IA et sa combinaison secrète
+	 * @return resultatComparaison Tableau stockant les resultats de la comparaison
+	 *  première case : nombre de digits biens placés
+	 *  deuxième case : nombre de digits présents (n'inclut pas les biens placés
+	 */
 	
 	public String[] lireResultatComparaison() {
 		String []resultatComparaison=new String[2];

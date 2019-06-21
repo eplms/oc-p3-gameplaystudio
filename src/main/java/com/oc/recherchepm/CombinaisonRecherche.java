@@ -38,10 +38,10 @@ public class CombinaisonRecherche extends Combinaison{
 	
 	/**
 	 * Méthode générant une nouvelle combinaison en fonction du résultat de la comparaison
-	 * @param nbTentative nombre de combinaisons tentée avant celle-ci
+	 * @param nbTentative correspond au rang de la tentative
 	 * @param combinaison1 combinaison  précédente
 	 * @param resultatComparaison tableau de résultat de la comparaison précédente avec la solution
-	 * @return nouvelle combinaison à partir du résultat
+	 * @return prochaineCombinaison nouvelle combinaison à partir du résultat
 	 */
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int prochaineCombinaison[]= new int[taille];
@@ -74,8 +74,8 @@ public class CombinaisonRecherche extends Combinaison{
 	}
 	
 	/**
-	 * Méthode vérifiant sur la combinaison estJuste à partir du résultat de la comparaison
-	 * @resultatComparaison : tableau dans lequel est stocké le résultat de la comparaison
+	 * Méthode vérifiant si la combinaison estJuste à partir du résultat de la comparaison
+	 * @param : resultatComparaison tableau dans lequel est stocké le résultat de la comparaison (+,- ou = )
 	 * @return : Boolean indiquant sur la comparaison correspond à une combinaison juste ou fausse
 	 */
 	public boolean estJuste (String resultatComparaison[]) {
@@ -95,8 +95,8 @@ public class CombinaisonRecherche extends Combinaison{
 	}
 	/**
 	 * Méthode permettant à l'utilisateur de saisir le resultat de la comparaison entre la
-	 * propo de l'IA et sa combinaison scrète
-	 * @return resultat de la comparaison saisie
+	 * propo de l'IA et sa combinaison secrète
+	 * @return resultatComparaison Tableau stockant les resultats de la comparaison saisie digit par digit
 	 */
 	public String[] lireResultatComparaison() {
 		char []resultatComp=new char[taille];
@@ -134,6 +134,7 @@ public class CombinaisonRecherche extends Combinaison{
 		}while(!(saisieValable && saisieLongueur));
 		return resultatComparaison;
 	}
+	
 	/**
 	 *Méthode affichant le résultat de la comparaison entre la proposition du joueur et la combinaison secrete
 	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
@@ -147,10 +148,19 @@ public class CombinaisonRecherche extends Combinaison{
 
 	}
 
+	/**
+	 * Méthode permettant de récupérer la taille de la combinaison dans le fichier de config
+	 * @return taille correspondant aux nombres de digit de la combinaison
+	 */
+	
 	public int getTaille() {
 		return taille;
 	}
 
+	/**
+	 * Méthode permettant de modifier la taille de la combinaison dans le fichier de config
+	 * @param taille
+	 */
 	public void setTaille(int taille) {
 		this.taille = taille;
 	}

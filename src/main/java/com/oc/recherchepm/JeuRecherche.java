@@ -1,9 +1,19 @@
 package com.oc.recherchepm;
 
 import com.oc.common.Jeu;
-
+/**
+ * JeuRecherche est la classe permettant de gérer le jeu Recherche dans ses différents modes
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
 public class JeuRecherche extends Jeu {
 	
+	/**
+	 * Méthode selectionnant le mode de jeu à lancer et initialise la taille de la combinaison,
+	 * le nombre maximum de tentatives et l'activation du mode developpeur
+	 * @param choixMode  le mode de jeu selectionné
+	 */
 	public void lancerJeu(int choixMode) {
 		initialiserParametresJeu();
 		switch (choixMode){
@@ -15,6 +25,9 @@ public class JeuRecherche extends Jeu {
 		}
 	}
 	
+	/**
+	 * Méthode lançant et pilotant le mode challenger du jeu recherche
+	 */
 	private void jouerChallenger () {
 		CombinaisonRecherche combinaison1 = new CombinaisonRecherche(getTaille());
 		CombinaisonRecherche combinaison2 = new CombinaisonRecherche(getTaille());
@@ -40,7 +53,9 @@ public class JeuRecherche extends Jeu {
 		}
 	}
 	
-	
+	/**
+	 * Méthode lançant et pilotant le mode defenseur du jeu recherche
+	 */
 	private void jouerDefenseur() {
 		int proposition[] =new int[getTaille()];
 		int nbTry=0;
@@ -63,6 +78,10 @@ public class JeuRecherche extends Jeu {
 		
 	}
 
+	/**
+	 * Méthode lançant et pilotant le mode duel du jeu recherche
+	 */
+	
 	private void jouerDuel() {
 		int nbTry=0;
 		boolean resultatAiJuste=false;

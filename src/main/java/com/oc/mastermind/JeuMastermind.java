@@ -2,10 +2,20 @@ package com.oc.mastermind;
 
 import com.oc.common.Jeu;
 
-public class JeuMastermind extends Jeu{
 
+/**
+ * JeuMastermind est la classe permettant de gérer le jeu Mastermind dans ses différents modes
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
+public class JeuMastermind extends Jeu{
+	
+	
 	/**
-	 * 
+	 * Méthode selectionnant le mode de jeu à lancer et initialise la taille de la combinaison,
+	 * le nombre maximum de tentatives et l'activation du mode developpeur
+	 * @param choixMode  le mode de jeu selectionné
 	 */
 	public void lancerJeu(int choixMode) {
 		initialiserParametresJeu();
@@ -19,7 +29,7 @@ public class JeuMastermind extends Jeu{
 	}
 	
 	/**
-	 * 
+	 * Méthode lançant et pilotant le jeu mastermind dans le mode challenger
 	 */
 	private void jouerChallenger () {
 		CombinaisonMastermind combinaison1 = new CombinaisonMastermind(getTaille());
@@ -46,7 +56,9 @@ public class JeuMastermind extends Jeu{
 		}
 	}
 	
-	
+	/**
+	 * Méthode lançant et pilotant le jeu mastermind dans le mode defenseur
+	 */
 	private void jouerDefenseur() {
 		int proposition[] =new int [getTaille()];
 		int nbTry=0;
@@ -74,7 +86,7 @@ public class JeuMastermind extends Jeu{
 
 	
 	/**
-	 * 
+	 * Méthode lançant et pilotant le jeu mastermind dans le mode duel
 	 */
 	private void jouerDuel() {
 		int nbTry=0;
