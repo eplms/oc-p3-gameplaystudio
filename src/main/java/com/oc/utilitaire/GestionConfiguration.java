@@ -8,8 +8,6 @@ import java.util.ResourceBundle;
  * @version 1.0
  * Juin 2019
  */
-
-
 public class GestionConfiguration {
 	// Déclaration objet configuration et lecture du fichier config.properties dans l'objet configuration
 	// "config" est le nom du fichier .properties

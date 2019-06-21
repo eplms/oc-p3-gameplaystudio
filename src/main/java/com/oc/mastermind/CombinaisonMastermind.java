@@ -78,18 +78,12 @@ public class CombinaisonMastermind extends Combinaison {
 	}
 	
 	/**
-	 * Generation d'une nouvelle combinaison en fonction des précédentes
-	 * 
-	 */
-	
-	/**
 	 * Méthode générant une nouvelle combinaison en fonction de l'historique des propositions et des comparaisons
 	 * @param nbTentative correspond au rang de la tentative
 	 * @param combinaison1 combinaison précédente
 	 * @param resultatComparaison tableau de résultat de la comparaison précédente avec la solution
 	 * @return prochaineCombinaison nouvelle proposition de combinaison
 	 */
-	
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
 		int[] prochaineCombinaison = new int [taille];
 		boolean estAdmissible=true;
