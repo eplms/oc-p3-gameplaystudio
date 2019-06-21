@@ -1,5 +1,13 @@
 package com.oc.common;
 
+/**
+ * Classe permettant de gérer le contenu des menus
+ * @author emmanuel
+ * @version 1.0
+ *	Juin 2019
+ */
+
+
 public class ContenuMenu extends Menu{
 	private String texteMenu;
 	private int nombreItem;

@@ -8,23 +8,28 @@ import org.apache.logging.log4j.Logger;
 
 import com.oc.main.MainLog;
 
-
+/**
+ * Menu est la classe abstraite permettant de gérer les différents menu dans ce qu'ils ont de commun
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
 public abstract class Menu implements IMenu {	
 	Scanner saisie=new Scanner(System.in);
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
 	/**
 	 * Méthode d'affichage d'un menu
-	 * @param texte de contenu du menu
+	 * @param texteMenu texte de contenu du menu
 	 */
-	
 	public void afficherMenu (String texteMenu) {
 		System.out.println(texteMenu);
 	}
 	
 	/**
 	 * Méthode de lecture d'un choix de menu en saisie clavier sous forme d'entier
-	 * @return int entier saisie au clavier
+	 * @param nombreItem nombre de choix possible dans le menu
+	 * @return choixMenu entier saisie au clavier correspondant au menu
 	 */
 	public int lireChoixMenu(int nombreItem) {
 		boolean saisieCorrecte=false;

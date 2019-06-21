@@ -6,7 +6,7 @@ import com.oc.common.Lanceur;
 
 public class Main {
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) {
 		
 		Lanceur jeu=new Lanceur();
 		LOG.debug("Lancement du jeu");

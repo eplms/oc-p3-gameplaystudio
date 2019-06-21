@@ -8,6 +8,15 @@ import org.apache.logging.log4j.Logger;
 import com.oc.common.Combinaison;
 import com.oc.main.MainLog;
 
+
+/**
+ * CombinaisonRecherche est la classe permettant de gérer les combinaisons spécifiquement au jeu recherche
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
+
+
 public class CombinaisonRecherche extends Combinaison{
 	Scanner saisieComp=new Scanner (System.in);
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);

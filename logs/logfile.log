@@ -1043,3 +1043,11 @@ DEBUG | 2019-06-20 16:24:13 | [main] common.Lanceur (Lanceur.java:28) -  choix d
 DEBUG | 2019-06-20 16:24:13 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
 DEBUG | 2019-06-20 16:24:13 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
 DEBUG | 2019-06-20 16:24:13 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-21 09:55:19 | [main] main.Main (Main.java:12) - Lancement du jeu
+WARN  | 2019-06-21 09:55:28 | [main] common.Menu (Menu.java:36) -  Mauvais choix de Menu : 4
+DEBUG | 2019-06-21 09:55:31 | [main] common.Lanceur (Lanceur.java:25) -  choix de jeu : 1
+DEBUG | 2019-06-21 09:55:33 | [main] common.Lanceur (Lanceur.java:28) -  choix de Mode : 1
+DEBUG | 2019-06-21 09:55:33 | [main] common.Jeu (Jeu.java:19) - taille combinaison :4
+DEBUG | 2019-06-21 09:55:33 | [main] common.Jeu (Jeu.java:22) - nombre essai : 10
+DEBUG | 2019-06-21 09:55:33 | [main] common.Jeu (Jeu.java:26) - Mode développeur activé
+DEBUG | 2019-06-21 09:55:38 | [main] common.Lanceur (Lanceur.java:32) -  choix de fin : 3

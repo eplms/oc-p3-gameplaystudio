@@ -8,13 +8,19 @@ import com.oc.mastermind.JeuMastermind;
 import com.oc.recherchepm.JeuRecherche;
 import com.oc.utilitaire.GestionConfiguration;
 
+
+/**
+ * Lanceur est la classe permettant de lancer les différents menus
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
 public class Lanceur{
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
 	/**
-	 * Méthode de gestion du lancement des menus et de lecture des choix utilisateurs 
+	 * Méthode permettant la gestion du lancement des menus et de lecture des choix utilisateurs 
 	 */
-	
 	public void lancerMenu(){
 		Boolean finDuJeu=false;
 		int choixJeux;
@@ -38,10 +44,11 @@ public class Lanceur{
 	}
 		
 	/**
-	 * Affichage du menu de choix du jeu et lecture du choix utilisateur
-	 * @return Choix du jeu fait par l'utilisateur
+	 * Methode gérant le menu de choix du jeu
+	 * 	Affichage du menu de choix du jeu 
+	 *  Lecture du choix de jeu par l'utilisateur
+	 * @return choixJeux Choix du jeu fait par l'utilisateur
 	 */
-	
 	private int lancerMenuJeu() {
 		String jeuxDebut="Bienvenue \n\n"+"A quel jeu voulez-vous jouer ?\n\n"+"1- Recherche+/- \n"+"2- Mastermind \n"+"3- quitter";
 		Boolean modeDeveloppeurActif=verifierModeDeveloppeur();
@@ -61,8 +68,10 @@ public class Lanceur{
 	}
 	
 	/**
-	 * Affichage du menu de choix de mode et lecture du choix utilisateur
-	 * @return mode de jeu choisi par utilisateur
+	 * Methode gérant le menu de choix de mode de jeu
+	 * 	Affichage du menu de choix du jeu ( Challenger, défenseur ou duel)
+	 *  Lecture du choix de jeu par l'utilisateur
+	 * @return choixMode Choix du mode de jeu fait par l'utilisateur
 	 */
 	
 	private int lancerMenuMode() {
@@ -78,8 +87,10 @@ public class Lanceur{
 	}
 	
 	/**
-	 * Affichage du menu de fin et lecture du choix utilisateur
-	 * @return choix de l'utilisateur
+	 * Methode gérant le menu de choix à la fin du jeu
+	 * 	Affichage du menu de choix en fin de jeur (rejouer à l'identique, rejouer différement ou quitter) 
+	 *  Lecture du choix de l'utilisateur
+	 * @return choixFin Choix fait par l'utilisateur
 	 */
 	
 	private int lancerMenuFin() {
@@ -94,11 +105,10 @@ public class Lanceur{
 		return choixFin;
 	}
 	/**
-	 * lancement du jeu choisi dans le mode choisi
+	 * Méthode lançant le jeu choisi dans le mode choisi par l'utilisateur
 	 * @param choixJeux correspond au jeu choisi
 	 * @param choixMode correspond au mode choisi
 	 */
-	
 	private void lancerJeu(int choixJeux, int choixMode) {
 		if (choixJeux==1) {
 			JeuRecherche jeu1= new JeuRecherche();
@@ -108,6 +118,13 @@ public class Lanceur{
 			jeu2.lancerJeu(choixMode);
 		}
 	}
+	
+	/**
+	 * Méthode permettant de lire l'indication de l'activation du mode développeur dans le fichier config.properties
+	 * @return modeDev
+	 * 	true : si le mode developpeur est activé (oui)
+	 * 	false : si le mode développeur n'est pas activé (non)
+	 */
 	private boolean verifierModeDeveloppeur() {
 		boolean modeDev=GestionConfiguration.lireModeDeveloppeur();
 		return modeDev;

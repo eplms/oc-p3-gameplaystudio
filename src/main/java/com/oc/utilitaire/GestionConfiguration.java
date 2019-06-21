@@ -2,6 +2,14 @@ package com.oc.utilitaire;
 
 import java.util.ResourceBundle;
 
+/**
+ * GestionConfiguration est la classe permettant de lire des données du fichier de configuration
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
+
+
 public class GestionConfiguration {
 	// Déclaration objet configuration et lecture du fichier config.properties dans l'objet configuration
 	// "config" est le nom du fichier .properties

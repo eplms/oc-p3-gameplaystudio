@@ -8,6 +8,15 @@ import org.apache.logging.log4j.Logger;
 
 import com.oc.main.MainLog;
 
+
+
+
+/**
+ * Combinaison est la classe abstraite permettant de gérer les combinaisons de manière commune aux jeux Recherche et Mastermind
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
 public abstract class Combinaison implements ICombinaison{
 	protected int taille;
 	protected int combinaison[][];
@@ -15,15 +24,15 @@ public abstract class Combinaison implements ICombinaison{
 	Scanner saisieCombi = new Scanner (System.in);
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
-	/** Méthode de génération aléatoire de combinaisons
-	 * @return tableau d'entier constituant la combinaison	
-	 */
+	
 	
 	public Combinaison (int taille) {
 		this.taille=taille;
 	}
 	
-
+	/** Méthode de génération aléatoire de combinaisons
+	 * @return combinaisonAleatoire tableau d'entier constituant la combinaison avec un digit par case	
+	 */
 	public int[] genererCombinaisonAleatoire() {
 		int i;
 		double digit;
@@ -39,7 +48,7 @@ public abstract class Combinaison implements ICombinaison{
 	 
 	/**
 	 * Méthode permettant d'afficher une combinaison
-	 * @param combinaison tableau contenant la combinaison à afficher
+	 * @param combinaison tableau contenant la combinaison à afficher avec un digit par case
 	 */
 	public void afficherCombinaison(int combinaison[]) {
 		//System.out.println("\nProposition de l'AI");
@@ -50,7 +59,8 @@ public abstract class Combinaison implements ICombinaison{
 	
 	/**
 	 * Méthode permettant la lecture d'une suite de nombres saisis au clavier
-	 * @return tableau d'entier contenant la combinaison à afficher
+	 * @param taille nombre de digits saisis
+	 * @return combinaison tableau d'entier contenant la combinaison à afficher
 	 */
 	
 	public int[] lireCombinaison (int taille){

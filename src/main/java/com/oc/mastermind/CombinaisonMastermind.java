@@ -9,6 +9,13 @@ import com.oc.common.Combinaison;
 import com.oc.main.MainLog;
 import com.oc.utilitaire.GestionConfiguration;
 
+
+/**
+ * CombinaisonMastermind est la classe permettant de gérer les combinaisons spécifiquement au jeu Mastermind
+ * @author Emmanuel Plumas
+ * @version 1.0
+ * Juin 2019
+ */
 public class CombinaisonMastermind extends Combinaison {
 	Scanner saisieComp=new Scanner (System.in);
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
