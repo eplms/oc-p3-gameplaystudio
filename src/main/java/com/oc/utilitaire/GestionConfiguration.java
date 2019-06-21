@@ -3,13 +3,13 @@ package com.oc.utilitaire;
 import java.util.ResourceBundle;
 
 public class GestionConfiguration {
-	/* Déclaration objet configuration et lecture du fichier config.properties dans l'objet configuration */
+	// Déclaration objet configuration et lecture du fichier config.properties dans l'objet configuration
 	// "config" est le nom du fichier .properties
 	static ResourceBundle configuration = ResourceBundle.getBundle("config");
 	
 	/**
-	 * Fonction de lecture du nombre d'essai dans le fichier config.properties
-	 * @return nombreEssai max autorisées
+	 * Méthode permettant de lire le nombre de tentatives max autorisées indiquées dans  le fichier config.properties
+	 * @return nombreEssai nombre de tentatives max autorisées
 	 */
 	
 	public static int lireNombreEssai () {
@@ -19,8 +19,8 @@ public class GestionConfiguration {
 	}
 	
 	/**
-	 * Fonction de lecture de la taille de la combinaison
-	 * @return tailleCombinaison en nombre de digits
+	 * Méthode permettant de lire la taille des combinaisons à trouver indiquées dans le fichier config.properties
+	 * @return tailleCombinaison taille des combinaisons
 	 */
 	public static int lireTailleCombinaison() {
 		String nombreDigit = configuration.getString("nombreDigit");
@@ -29,8 +29,10 @@ public class GestionConfiguration {
 	}
     
 	/**
-	 * Fonction de lecture du mode développeur
-	 * @return modeDeveloppeur en boolean
+	 * Méthode permettant de lire l'indication de l'activation du mode développeur dans le fichier config.properties
+	 * @return modeDeveloppeur
+	 * 	true : si le mode developpeur est activé (oui)
+	 * 	false : si le mode développeur n'est pas activé (non)
 	 */
 	public static boolean lireModeDeveloppeur() {
 		boolean modeDeveloppeur=false;
