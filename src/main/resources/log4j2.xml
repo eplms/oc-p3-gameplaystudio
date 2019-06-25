@@ -1,31 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration xmlns="http://logging.apache.org/log4j/2.0/config">
-    <Properties>
+     <Properties>
     	<!-- Dossier de destination du fichier de log -->
-        <Property name="basePath">../oc-p3-gameplaystudio/logs</Property>
-    </Properties>
+     	    <Property name="basePath">../oc-p3-gameplaystudio/logs</Property> 
+     </Properties>
     
-    <!-- Definition des layout pour chaque appender -->
+    <!-- Definition des layout pour chaque appender ici-->
     <Appenders>
-        <!-- File Appender -->
-        <File name="FILE" fileName="${basePath}/logfile.log" append="true">
-            <PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
-        </File>
-        <!-- Console Appender -->
-      <!--    
-      <Console name="STDOUT" target="SYSTEM_OUT">
-      		<PatternLayout pattern="%-5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n" />
-	  </Console> -->
-    </Appenders>
+    <RollingFile name="RollingFile" filePattern="${basePath}/$${date:yyyy-MM}/logfile-%d{MM-dd-yyyy}.log">
+      <PatternLayout>
+        	<Pattern>%5p | %d{yyyy-MM-dd HH:mm:ss} | [%t] %C{2} (%F:%L) - %m%n</Pattern>
+      </PatternLayout>
+      <Policies>
+      	<!--  Roller basé sur le temps par défaut 1 jour -->
+        <TimeBasedTriggeringPolicy />
+      </Policies>
+    </RollingFile>
+  </Appenders>
+    
+
     <Loggers>
         <!-- définition du niveau de priorité le plus bas pris en compte -->
-        <Logger name="com.jcg" level="debug" />
+        <Logger name="com.jcg" level="debug"/>
        <!-- définition des appenders : ici console et ecriture dans le fichier -->
         <Root level="debug">
          <!-- appender affichage console -->
          <!--     <AppenderRef ref="STDOUT" /> -->
          <!-- appender écriture dans fichier -->   
-            <AppenderRef ref="FILE" />
+            <AppenderRef ref="RollingFile" />
         </Root>
     </Loggers>	
 </Configuration>

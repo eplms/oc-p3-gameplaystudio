@@ -1,0 +1,14 @@
+DEBUG | 2019-06-25 17:27:59 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 17:28:01 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 17:28:01 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-25 17:28:01 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-25 17:28:01 | [main] common.Jeu (Jeu.java:33) - nombre essai : 5
+DEBUG | 2019-06-25 17:28:01 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-25 17:28:06 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
+DEBUG | 2019-06-25 17:33:57 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 17:33:59 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 17:34:00 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-25 17:34:00 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-25 17:34:00 | [main] common.Jeu (Jeu.java:33) - nombre essai : 5
+DEBUG | 2019-06-25 17:34:00 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-25 17:37:25 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
