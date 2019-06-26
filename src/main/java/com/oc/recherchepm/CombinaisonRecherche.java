@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.oc.common.Combinaison;
-import com.oc.main.MainLog;
+import com.oc.main.Main;
 
 
 /**
@@ -19,7 +19,7 @@ import com.oc.main.MainLog;
 
 public class CombinaisonRecherche extends Combinaison{
 	Scanner saisieComp=new Scanner (System.in);
-	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+	private static final Logger LOG = LogManager.getLogger(Main.class);
 
 	public CombinaisonRecherche(int taille) {
 		super (taille);

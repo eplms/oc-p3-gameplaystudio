@@ -3,7 +3,7 @@ package com.oc.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.oc.main.MainLog;
+import com.oc.main.Main;
 import com.oc.utilitaire.GestionConfiguration;
 
 /**
@@ -16,7 +16,7 @@ public abstract class Jeu implements IJeu{
 	private int taille;
 	private int nombreEssai;
 	private int modeDeveloppeur;
-	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+	private static final Logger LOG = LogManager.getLogger(Main.class);
 
 	/**
 	 * Méthode permettant de lancer la récupération des paramètres du jeu dans le fichier de configuration

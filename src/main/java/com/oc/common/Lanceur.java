@@ -3,7 +3,7 @@ package com.oc.common;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.oc.main.MainLog;
+import com.oc.main.Main;
 import com.oc.mastermind.JeuMastermind;
 import com.oc.recherchepm.JeuRecherche;
 import com.oc.utilitaire.GestionConfiguration;
@@ -16,7 +16,7 @@ import com.oc.utilitaire.GestionConfiguration;
  * Juin 2019
  */
 public class Lanceur{
-	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+	private static final Logger LOG = LogManager.getLogger(Main.class);
 
 	/**
 	 * Méthode permettant la gestion du lancement des menus et de lecture des choix utilisateurs 

@@ -6,7 +6,7 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.oc.main.MainLog;
+import com.oc.main.Main;
 
 /**
  * Menu est la classe abstraite permettant de gérer les différents menu dans ce qu'ils ont de commun
@@ -16,7 +16,7 @@ import com.oc.main.MainLog;
  */
 public abstract class Menu implements IMenu {	
 	Scanner saisie=new Scanner(System.in);
-	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+	private static final Logger LOG = LogManager.getLogger(Main.class);
 
 	/**
 	 * Méthode d'affichage d'un menu

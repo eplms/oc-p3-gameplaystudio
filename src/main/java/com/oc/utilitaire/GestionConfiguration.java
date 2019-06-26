@@ -5,7 +5,7 @@ import java.util.ResourceBundle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.oc.main.MainLog;
+import com.oc.main.Main;
 
 /**
  * GestionConfiguration est la classe permettant de lire des données du fichier de configuration
@@ -17,7 +17,7 @@ public class GestionConfiguration {
 	// Déclaration objet configuration et lecture du fichier config.properties dans l'objet configuration
 	// "config" est le nom du fichier .properties
 	static ResourceBundle configuration = ResourceBundle.getBundle("config");
-	private static final Logger LOG = LogManager.getLogger(MainLog.class);
+	private static final Logger LOG = LogManager.getLogger(Main.class);
 	/**
 	 * Méthode permettant de lire le nombre de tentatives max autorisées indiquées dans  le fichier config.properties
 	 * @return nombreEssai nombre de tentatives max autorisées
