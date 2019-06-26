@@ -3,11 +3,8 @@ package com.oc.common;
 public interface IJeu {
 	// accesseur attributs classe abstraite
 	public int getTaille();
-	public void setTaille(int taille);
 	public int getNombreEssai();
-	public void setNombreEssai(int nombreEssai);
-	public boolean isModeDeveloppeur();
-	public void setModeDeveloppeur(boolean modeDeveloppeur);
+	public int getModeDeveloppeur();
 
 	//Méthode de classe abstraite Jeu
 	public void initialiserParametresJeu();

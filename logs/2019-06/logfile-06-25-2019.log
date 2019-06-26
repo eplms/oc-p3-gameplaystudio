@@ -12,3 +12,49 @@ DEBUG | 2019-06-25 17:34:00 | [main] common.Jeu (Jeu.java:30) - taille combinais
 DEBUG | 2019-06-25 17:34:00 | [main] common.Jeu (Jeu.java:33) - nombre essai : 5
 DEBUG | 2019-06-25 17:34:00 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
 DEBUG | 2019-06-25 17:37:25 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
+DEBUG | 2019-06-25 17:57:31 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 17:57:33 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 17:57:35 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 2
+DEBUG | 2019-06-25 17:57:35 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-25 18:02:44 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:02:45 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 18:02:46 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-25 18:02:46 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+ WARN | 2019-06-25 18:02:46 | [main] utilitaire.GestionConfiguration (GestionConfiguration.java:35) -  Paramétrage du nomre d'essai max dans config.properties erroné : valeur par défaut utilisée 
+ WARN | 2019-06-25 18:02:46 | [main] utilitaire.GestionConfiguration (GestionConfiguration.java:35) -  Paramétrage du nomre d'essai max dans config.properties erroné : valeur par défaut utilisée 
+DEBUG | 2019-06-25 18:02:46 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-25 18:02:46 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-25 18:03:25 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:03:27 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 18:03:28 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-25 18:03:28 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+ WARN | 2019-06-25 18:03:28 | [main] utilitaire.GestionConfiguration (GestionConfiguration.java:35) -  Paramétrage du nomre d'essai max dans config.properties erroné : valeur par défaut utilisée 
+ WARN | 2019-06-25 18:03:28 | [main] utilitaire.GestionConfiguration (GestionConfiguration.java:35) -  Paramétrage du nomre d'essai max dans config.properties erroné : valeur par défaut utilisée 
+DEBUG | 2019-06-25 18:03:28 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-25 18:03:28 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-25 18:11:18 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:11:20 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 18:11:25 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-25 18:13:39 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:13:43 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 18:13:44 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+ WARN | 2019-06-25 18:13:44 | [main] utilitaire.GestionConfiguration (GestionConfiguration.java:53) -  Paramétrage de la taille de la combinaison dans config.properties erroné : valeur par défaut utilisée 
+ WARN | 2019-06-25 18:13:44 | [main] utilitaire.GestionConfiguration (GestionConfiguration.java:53) -  Paramétrage de la taille de la combinaison dans config.properties erroné : valeur par défaut utilisée 
+DEBUG | 2019-06-25 18:13:44 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-25 18:13:44 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-25 18:13:44 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-25 18:13:53 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
+DEBUG | 2019-06-25 18:14:32 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:15:40 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:16:28 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:17:16 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:17:27 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:18:05 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:18:23 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:24:00 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:24:06 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-25 18:24:21 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:31:33 | [main] main.Main (Main.java:12) - Lancement du jeu
+DEBUG | 2019-06-25 18:36:41 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 3
+DEBUG | 2019-06-25 18:36:43 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 3
+DEBUG | 2019-06-25 18:36:46 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3

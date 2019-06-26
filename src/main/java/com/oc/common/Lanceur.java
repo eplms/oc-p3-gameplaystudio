@@ -51,17 +51,20 @@ public class Lanceur{
 	 */
 	private int lancerMenuJeu() {
 		String jeuxDebut="Bienvenue \n\n"+"A quel jeu voulez-vous jouer ?\n\n"+"1- Recherche+/- \n"+"2- Mastermind \n"+"3- quitter";
-		Boolean modeDeveloppeurActif=verifierModeDeveloppeur();
 		int nombreItemJeu=3;
 		int choixJeux;
 		ContenuMenu menuJeux = new ContenuMenu();
 		menuJeux.setNombreItem(nombreItemJeu);
 		menuJeux.setTexteMenu(jeuxDebut);
 		menuJeux.afficherMenu(menuJeux.getTexteMenu());
-		if (modeDeveloppeurActif) {
+		int modeDeveloppeurActif=verifierModeDeveloppeur();
+		if (modeDeveloppeurActif==1) {
 			System.out.println("\nRappel : le mode développeur est activé !");
-		} else {
+		} else if(modeDeveloppeurActif==2){
 			System.out.println("\n (Le mode développeur n'est pas activé)");
+		} else if(modeDeveloppeurActif==3) {
+			System.out.println("\nLa configuration du mode développeur est erroné");
+			System.out.println("La configuration active est la configuration par défaut (mode développeur désactivé)!");
 		}
 		choixJeux= menuJeux.lireChoixMenu(menuJeux.getNombreItem());
 		return choixJeux;
@@ -122,11 +125,12 @@ public class Lanceur{
 	/**
 	 * Méthode permettant de lire l'indication de l'activation du mode développeur dans le fichier config.properties
 	 * @return modeDev
-	 * 	true : si le mode developpeur est activé (oui)
-	 * 	false : si le mode développeur n'est pas activé (non)
+	 * 	1 : si le mode developpeur est activé (oui)
+	 * 	2 : si le mode développeur n'est pas activé (non)
+	 *  3 : si l'indication du mode développeur est erronnée 
 	 */
-	private boolean verifierModeDeveloppeur() {
-		boolean modeDev=GestionConfiguration.lireModeDeveloppeur();
+	private int verifierModeDeveloppeur() {
+		int modeDev=GestionConfiguration.lireModeDeveloppeur();
 		return modeDev;
 		}
 }

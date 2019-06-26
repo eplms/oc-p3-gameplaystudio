@@ -38,7 +38,7 @@ public class JeuMastermind extends Jeu{
 		boolean resultat=false;
 		int combinaisonSecrete[]=combinaison1.genererCombinaisonAleatoire();
 		do {
-			if(isModeDeveloppeur()) {
+			if(getModeDeveloppeur()==1) {
 				System.out.print("\n(Combinaison secrète :");
 				combinaison1.afficherCombinaison(combinaisonSecrete);
 				System.out.println(")");
@@ -67,7 +67,7 @@ public class JeuMastermind extends Jeu{
 		String resultatComparaison[] =new String[2];
 		do {
 			proposition=combinaison1.genererProchaineCombinaison(nbTry, proposition, resultatComparaison);
-			System.out.print("\nLa proposition "+(nbTry+1)+" de l'AI est : ");
+			System.out.print("\nLa proposition "+(nbTry+1)+" de l'IA est : ");
 			combinaison1.afficherCombinaison(proposition);
 			resultatComparaison=combinaison1.lireResultatComparaison();
 			resultat=combinaison1.estJuste(resultatComparaison);
@@ -78,9 +78,9 @@ public class JeuMastermind extends Jeu{
 		} while (!resultat && nbTry<getNombreEssai());
 		
 		if (!resultat) {
-			System.out.println("\nL'AI a atteint le nombre max de tentative sans trouver la bonne combinaison! Félicitations !");
+			System.out.println("\nL'IA a atteint le nombre max de tentative sans trouver la bonne combinaison! Félicitations !");
 		}else {
-			System.out.println("\nL'AI a trouvé la bonne combinaison! Désolé !");
+			System.out.println("\nL'IA a trouvé la bonne combinaison! Désolé !");
 		}
 	}
 
@@ -100,7 +100,7 @@ public class JeuMastermind extends Jeu{
 
 		do {
 			//mode challenger
-			if(isModeDeveloppeur()) {
+			if(getModeDeveloppeur()==1) {
 				System.out.print("\n(Combinaison secrète :");
 				combinaison1.afficherCombinaison(combinaisonSecreteAi);
 				System.out.println(")");
@@ -112,7 +112,7 @@ public class JeuMastermind extends Jeu{
 			//mode defenseur
 			
 			propositionAi=combinaison1.genererProchaineCombinaison(nbTry, propositionAi, resultatComparaisonUtil);
-			System.out.print("\nLa proposition "+(nbTry+1)+" de l'AI est : ");
+			System.out.print("\nLa proposition "+(nbTry+1)+" de l'IA est : ");
 			combinaison1.afficherCombinaison(propositionAi);
 			resultatComparaisonUtil=combinaison1.lireResultatComparaison();
 			resultatAiJuste=combinaison1.estJuste(resultatComparaisonUtil);

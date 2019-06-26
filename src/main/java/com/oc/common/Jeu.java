@@ -15,7 +15,7 @@ import com.oc.utilitaire.GestionConfiguration;
 public abstract class Jeu implements IJeu{
 	private int taille;
 	private int nombreEssai;
-	private boolean modeDeveloppeur;
+	private int modeDeveloppeur;
 	private static final Logger LOG = LogManager.getLogger(MainLog.class);
 
 	/**
@@ -26,17 +26,19 @@ public abstract class Jeu implements IJeu{
 	 */
 	public void initialiserParametresJeu() {		
 		// initialisation de la taille de la combinaison à partir du fichier de configuration
-		setTaille(lireTailleCombinaison());
-		LOG.debug("taille combinaison :"+lireTailleCombinaison());
+		taille=lireTailleCombinaison();
+		LOG.debug("taille combinaison :"+taille);
 		// initialisation du nombre d'essai max autorisé à partir du fichier de configuration
-		setNombreEssai(lireNombreEssai());
-		LOG.debug("nombre essai : "+lireNombreEssai());
+		nombreEssai=lireNombreEssai();
+		LOG.debug("nombre essai : "+nombreEssai);
 		// initialisation du mode développeur à partir du fichier de configuration
-		setModeDeveloppeur(lireModeDeveloppeur());
-		if(lireModeDeveloppeur()){
+		modeDeveloppeur=lireModeDeveloppeur();
+		if(modeDeveloppeur==1){
 			LOG.debug("Mode développeur activé");
-		}else {
+		}else if(modeDeveloppeur==2){
 			LOG.debug("Mode développeur désactivé");
+		}else if(modeDeveloppeur==3) {
+			LOG.warn("La configuration du mode developpeur est erroné : par défaut le mode développeur n'est pas activé");
 		}
 
 	}		
@@ -62,11 +64,12 @@ public abstract class Jeu implements IJeu{
 	/**
 	 * Méthode permettant de récupérater l'indication d'activation du mode développeur dans le fichier de configuration
 	 * 	@return modDev 
-	 *    true : le mode développeur est activé
-	 *    false : le mode développeur est désactivé
+	 *    1 : le mode développeur est activé
+	 *    2 : le mode développeur est désactivé
+	 *    3 : indique une erreur dans la configuration du mode développeur 
 	 */
-	private boolean lireModeDeveloppeur() {
-		boolean modeDev=GestionConfiguration.lireModeDeveloppeur();
+	private int lireModeDeveloppeur() {
+		int modeDev=GestionConfiguration.lireModeDeveloppeur();
 		return modeDev;
 	}
 
@@ -74,25 +77,12 @@ public abstract class Jeu implements IJeu{
 		return taille;
 	}
 
-	public void setTaille(int taille) {
-		this.taille = taille;
-	}
-
 	public int getNombreEssai() {
 		return nombreEssai;
 	}
 
-	public void setNombreEssai(int nombreEssai) {
-		this.nombreEssai = nombreEssai;
-	}
-
-	public boolean isModeDeveloppeur() {
+	public int getModeDeveloppeur() {
 		return modeDeveloppeur;
 	}
-
-	public void setModeDeveloppeur(boolean modeDeveloppeur) {
-		this.modeDeveloppeur = modeDeveloppeur;
-	}
-	
 	
 }
