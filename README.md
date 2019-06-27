@@ -8,7 +8,10 @@ Elle permet de jouer à deux jeux :
 Ces jeux sont accessibles dans 3 modes différents (Challenger / Défenseur / Duel )
 
 ## Compilation
-Pour compiler et lancer le jeu, il vous faut saisir la commande dans le dossier dans lequel vous avez chargé le code source:
+Pour compiler avec maven, saisir la commande suivante le dossier dans lequel vous avez chargé le code source: mvn package 
+ 
+
+Pour lancer le jeu, saisir la commande dans le dossier dans lequel vous avez chargé le code source:
 
 java -jar target/oc-p3-gameplaystudio-0.0.1-SNAPSHOT.jar
 
