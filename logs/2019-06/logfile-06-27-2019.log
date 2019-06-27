@@ -1,0 +1,29 @@
+DEBUG | 2019-06-27 08:35:11 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-27 08:35:14 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 3
+DEBUG | 2019-06-27 08:35:14 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-27 08:35:14 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-27 08:35:14 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-27 08:35:34 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
+DEBUG | 2019-06-27 08:35:39 | [main] main.Main (Main.java:14) - Lancement du jeu
+DEBUG | 2019-06-27 08:36:56 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-27 08:36:59 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-27 08:36:59 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-27 08:36:59 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-27 08:36:59 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-27 08:37:10 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
+DEBUG | 2019-06-27 08:38:34 | [main] main.Main (Main.java:14) - Lancement du jeu
+DEBUG | 2019-06-27 08:38:34 | [main] main.Main (Main.java:14) - Lancement du jeu
+DEBUG | 2019-06-27 08:38:37 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-27 08:38:39 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-27 08:38:39 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-27 08:38:39 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-27 08:38:39 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-27 08:38:45 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
+DEBUG | 2019-06-27 08:41:04 | [main] main.Main (Main.java:14) - Lancement du jeu
+ WARN | 2019-06-27 08:41:12 | [main] common.Menu (Menu.java:51) -  Mauvais choix de Menu. Saisie d'un signe différent d'un entier
+DEBUG | 2019-06-27 08:41:16 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-27 08:41:17 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-27 08:41:17 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-27 08:41:17 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-27 08:41:17 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-27 08:41:23 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3
