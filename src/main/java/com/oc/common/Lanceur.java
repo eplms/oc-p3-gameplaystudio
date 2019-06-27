@@ -29,15 +29,25 @@ public class Lanceur{
 		do {
 			choixJeux=lancerMenuJeu();
 			LOG.debug(" choix de jeu : "+choixJeux);
-
-			choixMode=lancerMenuMode();
-			LOG.debug(" choix de Mode : "+choixMode);
-			do {
-				lancerJeu(choixJeux,choixMode);
-				choixFin=lancerMenuFin();
-				LOG.debug(" choix de fin : "+choixFin);
-			}while (choixFin==1);
-			if(choixFin==3) {
+			if (choixJeux!=3) {
+				choixMode=lancerMenuMode();
+				LOG.debug(" choix de Mode : "+choixMode);
+				if(choixMode!=4) {
+					lancerJeu(choixJeux,choixMode);
+					choixFin=lancerMenuFin();
+					LOG.debug(" choix de fin : "+choixFin);
+					while(choixFin==1) {
+						lancerJeu(choixJeux,choixMode);
+						choixFin=lancerMenuFin();
+						LOG.debug(" choix de fin : "+choixFin);
+					}
+					if(choixFin==3) {
+						finDuJeu=true;
+					}
+				}else {
+					finDuJeu=true;
+				}
+			}else {
 				finDuJeu=true;
 			}
 		}while(!finDuJeu); 
