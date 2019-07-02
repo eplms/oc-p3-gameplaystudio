@@ -18,7 +18,7 @@ Cloner le projet à partir du repos : https://github.com/eplms/oc-p3-gameplaystu
 ## Compilation
 Pour compiler avec maven, saisir la commande suivante le dossier dans lequel vous avez chargé le code source: mvn clean puis mvn compile
  
-##Execution
+## Execution
 
 Pour lancer le jeu, à partir du dossier dans lequel le code a été chargé, puis
 
