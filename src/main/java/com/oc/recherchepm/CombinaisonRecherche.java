@@ -28,8 +28,8 @@ public class CombinaisonRecherche extends Combinaison{
 	/**
 	 * méthode de comparaison de deux combinaisons
 	 * @return tableau contenant le resultat de la comparaison digit par digit
-	 * @param 1 : combinaison à trouver
-	 * @param 2: proposition de l'utilisateur
+	 * @param  combinaison1[] combinaison à trouver
+	 * @param  proposition[] proposition de l'utilisateur
 	 */
 	public String[] comparerCombinaison (int combinaison1[], int proposition[]) {
         String resultatComparaison[]= new String [taille];
@@ -49,7 +49,7 @@ public class CombinaisonRecherche extends Combinaison{
 	 * Méthode générant une nouvelle combinaison en fonction du résultat de la comparaison
 	 * @param nbTentative correspond au rang de la tentative
 	 * @param combinaison1 combinaison  précédente
-	 * @param resultatComparaison tableau de résultat de la comparaison précédente avec la solution
+	 * @param resultatComparaison[] tableau de résultat de la comparaison précédente avec la solution
 	 * @return prochaineCombinaison nouvelle combinaison à partir du résultat
 	 */
 	public int[] genererProchaineCombinaison(int nbTentative, int combinaison1[], String resultatComparaison[]) {
@@ -84,8 +84,8 @@ public class CombinaisonRecherche extends Combinaison{
 	
 	/**
 	 * Méthode vérifiant si la combinaison estJuste à partir du résultat de la comparaison
-	 * @param : resultatComparaison tableau dans lequel est stocké le résultat de la comparaison (+,- ou = )
-	 * @return : Boolean indiquant sur la comparaison correspond à une combinaison juste ou fausse
+	 * @param  resultatComparaison[] tableau dans lequel est stocké le résultat de la comparaison (+,- ou = )
+	 * @return  Boolean indiquant sur la comparaison correspond à une combinaison juste ou fausse
 	 */
 	public boolean estJuste (String resultatComparaison[]) {
 		boolean resultat;
@@ -105,7 +105,7 @@ public class CombinaisonRecherche extends Combinaison{
 	/**
 	 * Méthode permettant à l'utilisateur de saisir le resultat de la comparaison entre la
 	 * propo de l'IA et sa combinaison secrète
-	 * @return resultatComparaison Tableau stockant les resultats de la comparaison saisie digit par digit
+	 * @return resultatComparaison[] Tableau stockant les resultats de la comparaison saisie digit par digit
 	 */
 	public String[] lireResultatComparaison() {
 		char []resultatComp=new char[taille];
@@ -146,7 +146,7 @@ public class CombinaisonRecherche extends Combinaison{
 	
 	/**
 	 *Méthode affichant le résultat de la comparaison entre la proposition du joueur et la combinaison secrete
-	 * @tableau dans lequel sont stockés les résultats de la comparaison digit par digit
+	 * @param resultatComparaison[] tableau dans lequel sont stockés les résultats de la comparaison digit par digit
 	 */
 	public void afficherResultatComparaison(String resultatComparaison[]) {
 		System.out.print("Résultat : ");
@@ -168,7 +168,7 @@ public class CombinaisonRecherche extends Combinaison{
 
 	/**
 	 * Méthode permettant de modifier la taille de la combinaison dans le fichier de config
-	 * @param taille
+	 * @param taille correspondant aux nombres de digit de la combinaison
 	 */
 	public void setTaille(int taille) {
 		this.taille = taille;

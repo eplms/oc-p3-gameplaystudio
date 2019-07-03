@@ -1,0 +1,15 @@
+DEBUG | 2019-06-29 09:32:09 | [main] main.Main (Main.java:14) - Lancement du jeu
+DEBUG | 2019-06-29 09:32:40 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-29 09:32:50 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-29 09:32:50 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-29 09:32:50 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-29 09:32:50 | [main] common.Jeu (Jeu.java:39) - Mode développeur désactivé
+ WARN | 2019-06-29 09:34:10 | [main] common.Combinaison (Combinaison.java:97) -  Mauvaise proposition saisie : proposition ne contenant pas que des chiffres 
+DEBUG | 2019-06-29 09:35:01 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 2
+DEBUG | 2019-06-29 09:35:04 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 2
+DEBUG | 2019-06-29 09:35:10 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 1
+DEBUG | 2019-06-29 09:35:10 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-29 09:35:10 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-29 09:35:10 | [main] common.Jeu (Jeu.java:39) - Mode développeur désactivé
+DEBUG | 2019-06-29 09:38:04 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 2
+DEBUG | 2019-06-29 09:38:18 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 3

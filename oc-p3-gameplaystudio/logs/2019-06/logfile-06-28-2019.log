@@ -1,0 +1,16 @@
+DEBUG | 2019-06-28 19:18:50 | [main] main.Main (Main.java:14) - Lancement du jeu
+DEBUG | 2019-06-28 19:18:56 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 3
+DEBUG | 2019-06-28 19:40:49 | [main] main.Main (Main.java:14) - Lancement du jeu
+ WARN | 2019-06-28 19:41:33 | [main] common.Menu (Menu.java:51) -  Mauvais choix de Menu. Saisie d'un signe différent d'un entier
+DEBUG | 2019-06-28 19:41:38 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 1
+DEBUG | 2019-06-28 19:42:28 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 3
+DEBUG | 2019-06-28 19:42:28 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-28 19:42:28 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-28 19:42:28 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-28 19:45:54 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 2
+DEBUG | 2019-06-28 19:45:57 | [main] common.Lanceur (Lanceur.java:31) -  choix de jeu : 2
+DEBUG | 2019-06-28 19:46:06 | [main] common.Lanceur (Lanceur.java:34) -  choix de Mode : 2
+DEBUG | 2019-06-28 19:46:06 | [main] common.Jeu (Jeu.java:30) - taille combinaison :4
+DEBUG | 2019-06-28 19:46:06 | [main] common.Jeu (Jeu.java:33) - nombre essai : 10
+DEBUG | 2019-06-28 19:46:06 | [main] common.Jeu (Jeu.java:37) - Mode développeur activé
+DEBUG | 2019-06-28 19:47:29 | [main] common.Lanceur (Lanceur.java:38) -  choix de fin : 3

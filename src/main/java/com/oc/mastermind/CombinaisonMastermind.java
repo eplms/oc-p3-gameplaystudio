@@ -129,7 +129,7 @@ public class CombinaisonMastermind extends Combinaison {
 
 	/**
 	 * Méthode affichant le résultat de la combinaison
-	 * @comparaison : tableau contenant le résultat de la comparaison
+	 * @param  comparaison[] tableau contenant le résultat de la comparaison
 	 */
 	public void afficherResultatComparaison(String comparaison[]) {
 		System.out.println("-> Réponse : ");
