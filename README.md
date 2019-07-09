@@ -16,7 +16,7 @@ Le programme a été développé sous Java 8 avec Maven.
 Cloner le projet à partir du repos : https://github.com/eplms/oc-p3-gameplaystudio
 
 ## Compilation
-Pour compiler avec maven, saisir la commande suivante le dossier dans lequel vous avez chargé le code source: mvn clean puis mvn compile
+Pour compiler avec maven, saisir la commande suivante le dossier dans lequel vous avez chargé le code source: mvn clean puis mvn install
  
 ## Execution
 
